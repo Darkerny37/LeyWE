@@ -71,7 +71,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/textviewss"
         android:ems="10"
-        android:hint="****"
+        android:hint="*****"
         android:inputType="textPassword"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
