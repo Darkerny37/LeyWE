@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/almac_n_3d_18891790">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="386dp"
+        android:layout_height="562dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nlID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="ID Articulo"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nlNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="Nombre Articulo"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nlID" />
+
+            <TextView
+                android:id="@+id/nl..."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="Algo mas"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nlNombre" />
+
+            <TextView
+                android:id="@+id/nlTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="que tipo es?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nl..." />
+
+            <TextView
+                android:id="@+id/nlTipo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="que cantidad es?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerUno" />
+
+            <Spinner
+                android:id="@+id/spinnerUno"
+                android:layout_width="312dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:dropDownWidth="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nlTipo" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="58dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="52dp"
+                android:clickable="true"
+                app:backgroundTint="#FFF000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nlTipo2"
+                app:srcCompat="@drawable/mas2"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton3"
+                android:layout_width="58dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="52dp"
+                android:clickable="true"
+                app:backgroundTint="#FFF000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
+                app:srcCompat="@drawable/menos1"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editTextNumber"
+                android:layout_width="109dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="44dp"
+                android:ems="10"
+                android:hint="Valor"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nlTipo2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="108dp"
+                    android:layout_height="67dp"
+                    android:background="@drawable/login"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="#546E7A" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nlAceptar"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/burons"
+        android:text="Aceptar"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nlCancelar"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/burons"
+        android:text="Cancelar"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="111dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/casa_ley_logo_a556b3ef68_seeklogo_com" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

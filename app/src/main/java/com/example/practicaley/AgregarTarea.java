@@ -2,14 +2,13 @@ package com.example.practicaley;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AgregarTarea extends AppCompatActivity{
-    private Button botonAgregarTareas;
+    private Button botonAgregarTareas, botonMandarTareas;
     private ListView ListaTarea;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +16,10 @@ public class AgregarTarea extends AppCompatActivity{
         setContentView(R.layout.agregar_tarea);
         botonAgregarTareas = findViewById(R.id.botonAgregarTareas);
         ListaTarea = findViewById(R.id.ListaTarea);
+        botonMandarTareas = findViewById(R.id.botonMandarTareas);
 
-        botonAgregarTareas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AgregarTarea.this,RecibidorCodigo.class));
-            }
-        });
+        botonAgregarTareas.setOnClickListener(view -> startActivity(new Intent(AgregarTarea.this,RecibidorCodigo.class)));
+        botonMandarTareas.setOnClickListener(view -> startActivity(new Intent(AgregarTarea.this,MenuRecibidor.class)));
     }
 
 

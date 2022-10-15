@@ -1,10 +1,8 @@
 package com.example.practicaley;
 
 import android.os.Bundle;
-import android.view.View;
 import android.content.Intent;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,12 +15,7 @@ public class MenuRecibidor extends AppCompatActivity {
 
         botonTareas=findViewById(R.id.botonTareas);
 
-        botonTareas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MenuRecibidor.this,AgregarTarea.class));
-            }
-        });
+        botonTareas.setOnClickListener(view -> startActivity(new Intent(MenuRecibidor.this,AgregarTarea.class)));
     }
 
 }
