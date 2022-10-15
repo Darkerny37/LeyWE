@@ -36,6 +36,12 @@
         <activity android:name=".NuevoLoad">
 
         </activity>
+        <activity android:name=".MenuMontacarga">
+
+        </activity>
+        <activity android:name=".TareasMontacarga">
+
+        </activity>
     </application>
 
 </manifest>
