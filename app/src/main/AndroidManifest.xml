@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Practicaley"
-
+        android:hardwareAccelerated="true"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
@@ -28,6 +28,9 @@
 
         </activity>
         <activity android:name=".AgregarTarea">
+
+        </activity>
+        <activity android:name=".RecibidorCodigo">
 
         </activity>
     </application>

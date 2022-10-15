@@ -9,12 +9,12 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button;
+  private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button=findViewById(R.id.button);
+        button=findViewById(R.id.botonTareas);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

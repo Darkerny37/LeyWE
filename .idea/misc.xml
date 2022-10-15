@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/drawable/buron_norad.xml" value="0.231" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/drawable/burons.xml" value="0.23" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/drawable/login.xml" value="0.23" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/drawable/textviewss.xml" value="0.23" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/layout/agregar_tarea.xml" value="0.44895833333333335" />
+        <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/layout/agregar_tarea.xml" value="0.25" />
+        <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/layout/recibidor_codigo.xml" value="0.2234375" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/layout/recibidor_menu.xml" value="0.2234375" />
       </map>
     </option>
