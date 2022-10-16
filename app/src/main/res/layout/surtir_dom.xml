@@ -23,7 +23,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/nlID"
+                android:id="@+id/sdID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -35,7 +35,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/nlNombre"
+                android:id="@+id/sdNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
@@ -45,10 +45,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nlID" />
+                app:layout_constraintTop_toBottomOf="@+id/sdID" />
 
             <TextView
-                android:id="@+id/nl..."
+                android:id="@+id/sd..."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
@@ -58,10 +58,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nlNombre" />
+                app:layout_constraintTop_toBottomOf="@+id/sdNombre" />
 
             <TextView
-                android:id="@+id/nlTipo"
+                android:id="@+id/sdTipo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -71,53 +71,53 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nl..." />
+                app:layout_constraintTop_toBottomOf="@+id/sd..." />
 
             <TextView
-                android:id="@+id/nlTipo2"
+                android:id="@+id/sdTipo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="que cantidad se dejara?"
+                android:text="que cantidad es?"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerUno" />
+                app:layout_constraintTop_toBottomOf="@+id/spinnerDos" />
 
             <Spinner
-                android:id="@+id/spinnerUno"
+                android:id="@+id/spinnerDos"
                 android:layout_width="312dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="16dp"
                 android:dropDownWidth="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nlTipo" />
+                app:layout_constraintTop_toBottomOf="@+id/sdTipo" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton"
+                android:id="@+id/sdfloatingActionButton"
                 android:layout_width="58dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="52dp"
-                android:clickable="false"
+                android:clickable="true"
                 app:backgroundTint="#FFF000"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nlTipo2"
+                app:layout_constraintTop_toBottomOf="@+id/sdTipo2"
                 app:srcCompat="@drawable/mas2"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton3"
+                android:id="@+id/sdfloatingActionButton3"
                 android:layout_width="58dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="52dp"
-                android:clickable="false"
+                android:clickable="true"
                 app:backgroundTint="#FFF000"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
+                app:layout_constraintTop_toBottomOf="@+id/sdfloatingActionButton"
                 app:srcCompat="@drawable/menos1"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -132,7 +132,7 @@
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nlTipo2">
+                app:layout_constraintTop_toBottomOf="@+id/sdTipo2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="108dp"
@@ -148,7 +148,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/nlAceptar"
+        android:id="@+id/sdAceptar"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginTop="14dp"
@@ -160,7 +160,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/nlCancelar"
+        android:id="@+id/sdCancelar"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginStart="28dp"

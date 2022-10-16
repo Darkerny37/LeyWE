@@ -48,6 +48,12 @@
         <activity android:name=".ConfirmarUbicacion">
 
         </activity>
+        <activity android:name=".MontacargaSCodigo">
+
+        </activity>
+        <activity android:name=".SurtirDom">
+
+        </activity>
     </application>
 
 </manifest>

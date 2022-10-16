@@ -17,7 +17,7 @@ public class MenuMontacarga extends AppCompatActivity {
         btnSurti=findViewById(R.id.btnSurti);
 
       btnReserva.setOnClickListener(view -> startActivity(new Intent(MenuMontacarga.this,TareasMontacarga.class)));
-      //btnConsulta.setOnClickListener(view -> startActivity(new Intent(MenuMontacarga.this,.class)));
+      btnSurti.setOnClickListener(view -> startActivity(new Intent(MenuMontacarga.this,MontacargaSCodigo.class)));
       //btnConsulta.setOnClickListener(view -> startActivity(new Intent(MenuMontacarga.this,.class)));
     }
 
