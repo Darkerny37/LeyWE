@@ -42,6 +42,12 @@
         <activity android:name=".TareasMontacarga">
 
         </activity>
+        <activity android:name=".ReservaNewUbicacion">
+
+        </activity>
+        <activity android:name=".ConfirmarUbicacion">
+
+        </activity>
     </application>
 
 </manifest>

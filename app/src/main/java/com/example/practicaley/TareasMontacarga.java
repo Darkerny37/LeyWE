@@ -15,7 +15,7 @@ public class TareasMontacarga extends AppCompatActivity {
 
         btnRegLis = findViewById(R.id.btnRegLis);
 
-        btnRegLis.setOnClickListener(view -> startActivity(new Intent(TareasMontacarga.this,MenuMontacarga.class)));
+        btnRegLis.setOnClickListener(view -> startActivity(new Intent(TareasMontacarga.this,ReservaNewUbicacion.class)));
 
     }
 

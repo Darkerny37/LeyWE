@@ -5,15 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/almac_n_3d_18891790"
-    tools:context=".TareasMontacarga">
-
-
+    tools:context=".ReservaNewUbicacion">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="566dp"
-        android:layout_marginTop="4dp"
+        android:layout_height="572dp"
         android:background="#FFFFFF"
         app:cardBackgroundColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,15 +24,16 @@
             <ListView
                 android:id="@+id/listU"
                 android:layout_width="match_parent"
-                android:layout_height="482dp"
+                android:layout_height="420dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
                 android:layout_width="match_parent"
-                android:layout_height="82dp"
+                android:layout_height="76dp"
                 android:background="#e41e26"
                 app:cardBackgroundColor="#e41e26"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -51,15 +49,46 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Lista De Tareas"
+                        android:text="Tarea"
                         android:textColor="#FFFFFFFF"
                         android:textSize="30sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:background="#e41e26"
+                app:cardBackgroundColor="#e41e26"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ubicaciones disponibles"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="22sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -69,10 +98,10 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRegLis"
+        android:id="@+id/btnUbLis"
         android:layout_width="223dp"
         android:layout_height="59dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/burons"
         android:text="Regresar"
         android:textColor="#FFFFFFFF"
@@ -82,11 +111,12 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="91dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="76dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
         android:contentDescription="Logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/casa_ley_logo_a556b3ef68_seeklogo_com" />
