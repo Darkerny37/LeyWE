@@ -7,13 +7,14 @@
     android:background="@drawable/almac_n_3d_18891790">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="380dp"
-        android:layout_height="426dp"
-        android:layout_marginTop="28dp"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="491dp"
+        android:layout_marginTop="16dp"
         android:background="#FFFFFF"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
@@ -22,42 +23,50 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/botonTareas"
-                android:layout_width="269dp"
-                android:layout_height="128dp"
-                android:layout_marginTop="48dp"
-                android:background="@drawable/burons"
-                android:text="Asignar Tareas"
+                android:id="@+id/botonLevantarArticulo"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:background="@drawable/buron_norad"
+                android:text="agregar inventario pasillo X"
                 android:textColor="#FFFFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/botonLI"
-                android:layout_width="269dp"
-                android:layout_height="128dp"
-                android:layout_marginTop="48dp"
-                android:background="@drawable/burons"
-                android:text="Levantar Inventario"
-                android:textColor="#FFFFFFFF"
+            <ListView
+                android:id="@+id/ListaLev"
+                android:layout_width="match_parent"
+                android:layout_height="417dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/botonTareas" />
+                app:layout_constraintTop_toBottomOf="@+id/botonLevantarArticulo"></ListView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botonLevantarInventario"
+        android:layout_width="223dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/burons"
+        android:text="Levantar Inventario"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="209dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="91dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="4dp"
         android:contentDescription="Logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/casa_ley_logo_a556b3ef68_seeklogo_com" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

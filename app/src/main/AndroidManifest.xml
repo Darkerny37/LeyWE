@@ -54,6 +54,18 @@
         <activity android:name=".SurtirDom">
 
         </activity>
+        <activity android:name=".RecibidorCPasillo">
+
+        </activity>
+        <activity android:name=".LevantarArticulos">
+
+        </activity>
+        <activity android:name=".LevNuevoArticulo">
+
+        </activity>
+        <activity android:name=".ContarAR">
+
+        </activity>
     </application>
 
 </manifest>
