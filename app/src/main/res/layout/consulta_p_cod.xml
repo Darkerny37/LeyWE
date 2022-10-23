@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/almac_n_3d_18891790">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="426dp"
+        android:layout_marginTop="28dp"
+        android:background="#FFFFFF"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/codigoArCon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="ID pasillo"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/escaneadorArCon2"
+                android:layout_width="248dp"
+                android:layout_height="94dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/burons"
+                android:text="Usar escaner"
+                android:textColor="#FFFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/continuarArCon2"
+                android:layout_width="248dp"
+                android:layout_height="94dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/burons"
+                android:text="Continuar"
+                android:textColor="#FFFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/escaneadorArCon2" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editTextNumber"
+                android:layout_width="280dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                app:boxStrokeColor="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:hintTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/codigoArCon2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editCodigoArCon2"
+                    android:layout_width="279dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/login"
+                    android:hint="Codigo"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="#546E7A" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="209dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/casa_ley_logo_a556b3ef68_seeklogo_com" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

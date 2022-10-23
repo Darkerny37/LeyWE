@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,MenuRecibidor.class));
            else if(etID.getText().toString().equals("2"))
                 startActivity(new Intent(MainActivity.this,MenuMontacarga.class));
+           else if(etID.getText().toString().equals("3"))
+                startActivity(new Intent(MainActivity.this,MenuAdmin.class));
            else
                 Toast.makeText(this, "No es valido ese identificador", Toast.LENGTH_SHORT).show();
         });

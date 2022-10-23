@@ -66,6 +66,24 @@
         <activity android:name=".ContarAR">
 
         </activity>
+        <activity android:name=".MenuAdmin">
+
+        </activity>
+        <activity android:name=".ArticuloConsultado">
+
+        </activity>
+        <activity android:name=".ConsultaACodigo">
+
+        </activity>
+        <activity android:name=".ConsultaPCodigo">
+
+        </activity>
+        <activity android:name=".PasilloConsulta">
+
+        </activity>
+        <activity android:name=".Reporte">
+
+        </activity>
     </application>
 
 </manifest>
