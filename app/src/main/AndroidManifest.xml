@@ -84,6 +84,31 @@
         <activity android:name=".Reporte">
 
         </activity>
+        <activity android:name=".AgregarAR">
+
+        </activity>
+        <activity android:name=".AgregarCodigo">
+
+        </activity>
+        <activity android:name=".ControlCodigo">
+
+        </activity>
+        <activity android:name=".EliminarCodigo">
+
+        </activity>
+        <activity android:name=".EliminarER">
+
+        </activity>
+        <activity android:name=".MenuControlI">
+
+        </activity>
+        <activity android:name=".ModificarCodigo">
+
+        </activity>
+        <activity android:name=".ModificarMR">
+
+        </activity>
+
     </application>
 
 </manifest>

@@ -20,7 +20,7 @@ public class MenuAdmin extends AppCompatActivity {
         btnConsultaA.setOnClickListener(view -> startActivity(new Intent(MenuAdmin.this,ConsultaACodigo.class)));
         btnConsultaP.setOnClickListener(view -> startActivity(new Intent(MenuAdmin.this,ConsultaPCodigo.class)));
         btnReporte.setOnClickListener(view -> startActivity(new Intent(MenuAdmin.this,Reporte.class)));
-      //  btnControlI.setOnClickListener(view -> startActivity(new Intent(MenuAdmin.this,MenuControlI.class)));
+        btnControlI.setOnClickListener(view -> startActivity(new Intent(MenuAdmin.this,ControlCodigo.class)));
 
     }
 
