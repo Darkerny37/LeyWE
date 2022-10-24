@@ -108,6 +108,9 @@
         <activity android:name=".ModificarMR">
 
         </activity>
+        <activity android:name=".Compara_Rep">
+
+        </activity>
 
     </application>
 

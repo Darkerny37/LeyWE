@@ -15,7 +15,7 @@ public class Reporte extends AppCompatActivity {
 
         btnRep = findViewById(R.id.btnRep);
 
-        btnRep.setOnClickListener(view -> startActivity(new Intent(Reporte.this,MenuAdmin.class)));
+        btnRep.setOnClickListener(view -> startActivity(new Intent(Reporte.this,Compara_Rep.class)));
 
     }
 
