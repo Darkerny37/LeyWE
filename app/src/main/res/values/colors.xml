@@ -6,5 +6,11 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="Strange_black">#11111111</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Rojo_Ley">#e41e26</color>
+    <color name="TextView_color">#EAE5E4</color>
+    <color name="yellow">#FFF000</color>
+    <color name="codCol">#546E7A</color>
+
 </resources>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/almac_n_3d_18891790">
@@ -10,9 +9,11 @@
         android:layout_width="380dp"
         android:layout_height="426dp"
         android:layout_marginTop="28dp"
-        android:background="#FFFFFF"
+        android:layout_marginBottom="100dp"
+        android:background="@color/white"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2">
@@ -27,8 +28,8 @@
                 android:layout_height="128dp"
                 android:layout_marginTop="48dp"
                 android:background="@drawable/burons"
-                android:text="Asignar Tareas"
-                android:textColor="#FFFFFFFF"
+                android:text="@string/AsignarTa"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -39,8 +40,8 @@
                 android:layout_height="128dp"
                 android:layout_marginTop="48dp"
                 android:background="@drawable/burons"
-                android:text="Levantar Inventario"
-                android:textColor="#FFFFFFFF"
+                android:text="@string/Levantar_Inv"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/botonTareas" />
@@ -53,7 +54,7 @@
         android:layout_width="209dp"
         android:layout_height="128dp"
         android:layout_marginTop="28dp"
-        android:contentDescription="Logo"
+        android:contentDescription="@string/Logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

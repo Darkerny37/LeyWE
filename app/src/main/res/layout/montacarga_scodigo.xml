@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/almac_n_3d_18891790">
@@ -10,9 +9,11 @@
         android:layout_width="380dp"
         android:layout_height="426dp"
         android:layout_marginTop="28dp"
-        android:background="#FFFFFF"
+        android:layout_marginBottom="60dp"
+        android:background="@color/white"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2">
@@ -26,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
-                android:text="Identificador"
+                android:text="@string/ID_Articulo"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -39,8 +40,8 @@
                 android:layout_height="94dp"
                 android:layout_marginTop="36dp"
                 android:background="@drawable/burons"
-                android:text="Usar escaner"
-                android:textColor="#FFFFFFFF"
+                android:text="@string/Escaner"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
@@ -51,8 +52,8 @@
                 android:layout_height="94dp"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/burons"
-                android:text="Continuar"
-                android:textColor="#FFFFFFFF"
+                android:text="@string/Continuar"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/escaneadorDos" />
@@ -76,10 +77,10 @@
                     android:layout_width="279dp"
                     android:layout_height="55dp"
                     android:background="@drawable/login"
-                    android:hint="Codigo"
+                    android:hint="@string/Codigo"
                     android:inputType="number"
                     android:textColor="@color/black"
-                    android:textColorHint="#546E7A" />
+                    android:textColorHint="@color/codCol" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -91,7 +92,7 @@
         android:layout_width="209dp"
         android:layout_height="128dp"
         android:layout_marginTop="28dp"
-        android:contentDescription="Logo"
+        android:contentDescription="@string/Logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

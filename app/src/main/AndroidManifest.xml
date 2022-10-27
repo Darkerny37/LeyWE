@@ -16,7 +16,8 @@
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,91 +25,91 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuRecibidor">
+        <activity android:name=".MenuRecibidor" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".AgregarTarea">
+        <activity android:name=".AgregarTarea" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".RecibidorCodigo">
+        <activity android:name=".RecibidorCodigo" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".NuevoLoad">
+        <activity android:name=".NuevoLoad" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".MenuMontacarga">
+        <activity android:name=".MenuMontacarga" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".TareasMontacarga">
+        <activity android:name=".TareasMontacarga" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ReservaNewUbicacion">
+        <activity android:name=".ReservaNewUbicacion" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ConfirmarUbicacion">
+        <activity android:name=".ConfirmarUbicacion" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".MontacargaSCodigo">
+        <activity android:name=".MontacargaSCodigo" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".SurtirDom">
+        <activity android:name=".SurtirDom" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".RecibidorCPasillo">
+        <activity android:name=".RecibidorCPasillo" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".LevantarArticulos">
+        <activity android:name=".LevantarArticulos" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".LevNuevoArticulo">
+        <activity android:name=".LevNuevoArticulo" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ContarAR">
+        <activity android:name=".ContarAR" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".MenuAdmin">
+        <activity android:name=".MenuAdmin" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ArticuloConsultado">
+        <activity android:name=".ArticuloConsultado" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ConsultaACodigo">
+        <activity android:name=".ConsultaACodigo" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ConsultaPCodigo">
+        <activity android:name=".ConsultaPCodigo" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".PasilloConsulta">
+        <activity android:name=".PasilloConsulta" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".Reporte">
+        <activity android:name=".Reporte" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".AgregarAR">
+        <activity android:name=".AgregarAR" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".AgregarCodigo">
+        <activity android:name=".AgregarCodigo" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ControlCodigo">
+        <activity android:name=".ControlCodigo" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".EliminarCodigo">
+        <activity android:name=".EliminarCodigo" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".EliminarER">
+        <activity android:name=".EliminarER" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".MenuControlI">
+        <activity android:name=".MenuControlI" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ModificarCodigo">
+        <activity android:name=".ModificarCodigo" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ModificarMR">
+        <activity android:name=".ModificarMR" android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".Compara_Rep">
+        <activity android:name=".Compara_Rep" android:screenOrientation="portrait">
 
         </activity>
 

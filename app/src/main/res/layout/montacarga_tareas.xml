@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/almac_n_3d_18891790"
-    tools:context=".TareasMontacarga">
+    android:background="@drawable/almac_n_3d_18891790">
 
 
 
@@ -14,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="566dp"
         android:layout_marginTop="4dp"
-        android:background="#FFFFFF"
+        android:background="@color/white"
         app:cardBackgroundColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,8 +34,8 @@
                 android:id="@+id/cardView2"
                 android:layout_width="match_parent"
                 android:layout_height="82dp"
-                android:background="#e41e26"
-                app:cardBackgroundColor="#e41e26"
+                android:background="@color/Rojo_Ley"
+                app:cardBackgroundColor="@color/Rojo_Ley"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -51,8 +49,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Lista De Tareas"
-                        android:textColor="#FFFFFFFF"
+                        android:text="@string/TaskList"
+                        android:textColor="@color/white"
                         android:textSize="30sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -74,18 +72,20 @@
         android:layout_height="59dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/burons"
-        android:text="Regresar"
-        android:textColor="#FFFFFFFF"
+        android:text="@string/Regresar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="91dp"
         android:layout_height="71dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="Logo"
+        android:contentDescription="@string/Logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

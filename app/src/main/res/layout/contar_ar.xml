@@ -11,7 +11,7 @@
         android:layout_width="386dp"
         android:layout_height="562dp"
         android:layout_marginTop="8dp"
-        android:background="#FFFFFF"
+        android:background="@color/white"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:text="ID Articulo"
+                android:text="@string/ID_Articulo"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
-                android:text="Nombre Articulo"
+                android:text="@string/Nom_Articulo"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
-                android:text="Algo mas"
+                android:text="@string/Extra"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="92dp"
-                android:text="que cantidad se conto?"
+                android:text="@string/CantidadCon"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -79,11 +79,12 @@
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="52dp"
                 android:clickable="false"
-                app:backgroundTint="#FFF000"
+                app:backgroundTint="@color/yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/caTipo"
                 app:srcCompat="@drawable/mas2"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck"
+                android:contentDescription="@string/Relleno" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton3"
@@ -92,11 +93,12 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="52dp"
                 android:clickable="false"
-                app:backgroundTint="#FFF000"
+                app:backgroundTint="@color/yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
                 app:srcCompat="@drawable/menos1"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck"
+                android:contentDescription="@string/Relleno"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editTextNumber"
@@ -105,7 +107,7 @@
                 android:layout_marginStart="128dp"
                 android:layout_marginTop="44dp"
                 android:ems="10"
-                android:hint="Valor"
+                android:hint="@string/valor"
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +119,7 @@
                     android:background="@drawable/login"
                     android:inputType="number"
                     android:textColor="@color/black"
-                    android:textColorHint="#546E7A" />
+                    android:textColorHint="@color/codCol" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -131,10 +133,12 @@
         android:layout_marginTop="14dp"
         android:layout_marginEnd="28dp"
         android:background="@drawable/burons"
-        android:text="Aceptar"
-        android:textColor="#FFFFFFFF"
+        android:text="@string/Aceptar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/caCancelar"
@@ -143,17 +147,19 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="14dp"
         android:background="@drawable/burons"
-        android:text="Cancelar"
-        android:textColor="#FFFFFFFF"
+        android:text="@string/Cancelar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="111dp"
         android:layout_height="62dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="Logo"
+        android:contentDescription="@string/Logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
