@@ -18,7 +18,7 @@ class CreateArticulosTable extends Migration
             $table->string('nombreArticulo');
             $table->string('numeroSerie');
             $table->integer('cantidad');
-            $table->softDeletes();
+            //$table->softDeletes();
         });
     }
 
@@ -31,8 +31,9 @@ class CreateArticulosTable extends Migration
     {
         Schema::dropIfExists('articulos');
         // forma para borrar datos sin borrar datos :)
-        Schema::table('articulos', function(Blueprint $table){
+        /*Schema::table('articulos', function(Blueprint $table){
             $table->softDeletes();
         });
+        */
     }
 }

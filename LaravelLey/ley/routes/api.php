@@ -22,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/login', [App\Http\Controllers\LoginController::class, 'store']);
 
 Route::post('/ArticuloAgregar', [App\Http\Controllers\ArticuloController::class, 'store']);
+
+Route::delete('/ArticuloEliminar/{id}', [App\Http\Controllers\ArticuloController::class, 'destroy']);

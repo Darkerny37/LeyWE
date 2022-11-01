@@ -109,6 +109,25 @@ class ArticuloController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Articulo modelo de la base de datos
+        $art = Articulo::find($id);
+
+        if($art != null)
+        {
+            if($art->delete())
+            {
+                return response()->json([
+                    'message' => 'Se elimino correctamente'
+                ]);
+            }else{
+                return response()->json([
+                    'message' => 'No se elimino articulo'
+                ]);
+            }
+        }else{
+            return response()->json([
+                'message' => 'No se encontro articulo'
+            ]);
+        }
     }
 }

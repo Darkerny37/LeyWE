@@ -13,4 +13,7 @@ class Articulo extends Model
 
     //
     public $timestamps = false;
+
+    // esta linea especifica que el primary key es diferente al de Laravel($id)
+    protected $primaryKey = 'idArticulo';
 }
