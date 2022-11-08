@@ -86,7 +86,9 @@ class ArticuloController extends Controller
      */
     public function edit($id)
     {
-        //
+        $art = Articulo::findOrFail($id);
+
+
     }
 
     /**
