@@ -14,7 +14,7 @@ class ArticuloController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -75,9 +75,27 @@ class ArticuloController extends Controller
      */
     public function show($id)
     {
-        //
+        $art = Articulo::where("numeroSerie","=", $id)
+                ->first(); // first siempre trae algo o nulo y get trae algo o vacio
+
+        if($art != null){
+
+            return response()->json([
+                'data' => $art
+            ]);
+        }else{
+            return response()->json([
+                'message' => 'no se encontraron datos'
+            ]);
+        }
     }
 
+    /*
+     $flights = Flight::where('active', 1)
+               ->orderBy('name')
+               ->take(10)
+               ->get();
+    */
     /**
      * Show the form for editing the specified resource.
      *
