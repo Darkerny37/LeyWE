@@ -15,6 +15,7 @@ class CreatePasillosTable extends Migration
     {
         Schema::create('pasillos', function (Blueprint $table) {
             $table->id('idPasillo');
+            $table->string('codigoBarras',15);
             $table->string('nombrePasillo',30);
             $table->unsignedBigInteger('reserva');
             $table->unsignedBigInteger('domicilio');

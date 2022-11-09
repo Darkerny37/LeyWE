@@ -9,6 +9,11 @@ class Pasillo extends Model
 {
     use HasFactory;
 
+    // ya no manejar timestamps
+    public $timestamps = false;
+    // esta linea especifica que el primary key es diferente al de Laravel($id)
+    protected $primaryKey = 'idPasillo';
+
     public function reservas(){
         return $this->hasMany(Reserva::class, 'idReserva','reservas');
     }
