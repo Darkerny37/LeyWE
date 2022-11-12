@@ -9,6 +9,10 @@ class Load extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
+    protected $primaryKey = 'idLoad';
+
     public function articulos(){
         return $this->hasMany(Articulo::class,'idArticulo','articulo');
     }

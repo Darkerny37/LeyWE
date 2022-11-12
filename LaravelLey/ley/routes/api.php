@@ -38,4 +38,24 @@ Route::delete('/PasilloEliminar/{id}', [App\Http\Controllers\PasilloController::
 Route::get('/PasilloConsultar/{id}', [App\Http\Controllers\PasilloController::class, 'show']);
 /*fin*/
 
+/*Reporte*/
 Route::get('/ReporteConsultar/{id}', [App\Http\Controllers\ReporteController::class, 'show']);
+/*fin*/
+
+/*Load*/
+Route::post('/LoadAgregar', [App\Http\Controllers\LoadController::class, 'store']);
+
+Route::get('/LoadConsultar/{id}', [App\Http\Controllers\LoadController::class, 'show']);
+
+Route::delete('/LoadEliminar/{id}', [App\Http\Controllers\LoadController::class, 'destroy']);
+/*fin*/
+
+/*Tarea*/
+Route::post('/TareaAgregar', [App\Http\Controllers\TareaController::class, 'store']);
+
+Route::delete('/TareaEliminar/{id}', [App\Http\Controllers\TareaController::class, 'destroy']);
+/*fin*/
+
+/*Ubicacion*/
+
+/*fin*/

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Reporte;
+use App\Models\Load;
 
-class ReporteController extends Controller
+class LoadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +35,33 @@ class ReporteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $load = new Load();
+
+        if( $request->codigoBarras !== null and
+            $request->articulo !== null and
+            $request->usuario !== null and
+            $request->domicilio !== null)
+        {
+            $load->codigoBarras = $request->codigoBarras;
+            $load->articulo = $request->articulo;
+            $load->usuario = $request->usuario;
+            $load->domicilio = $request->domicilio;
+
+            if($load->save())
+            {
+                return response()->json([
+                    'message' => 'Load guardado correctamente'
+                ]);
+            }else{
+                return response()->json([
+                    'message' => 'No se pudo guardar el Load'
+                ]);
+            }
+        }else{
+            return response()->json([
+                'message' => 'Campos nulos'
+            ]);
+        }
     }
 
     /**
@@ -46,17 +72,16 @@ class ReporteController extends Controller
      */
     public function show($id)
     {
-        $rep = Reporte::where("idReporte", $id)
+        $load = Load::where("codigoBarras", $id)
                 ->first();
 
-        if($rep != null)
-        {
+        if($load != null){
             return response()->json([
-                'data' => $rep
+                'data' => $load
             ]);
         }else{
             return response()->json([
-                'message' => 'No se encontro el reporte'
+                'message' => 'No se encontraron datos'
             ]);
         }
     }
@@ -92,6 +117,20 @@ class ReporteController extends Controller
      */
     public function destroy($id)
     {
+        $load = Load::find($id);
 
+        if($load != null){
+            if($load->delete()){
+                return response()->json([
+                    'message' => 'Se elimino correctamente'
+                ]);
+            }else{
+                return response()->json('No se pudo eliminar el Load');
+            }
+        }else{
+            return response()->json([
+                'message' => 'No se encontro el Load'
+            ]);
+        }
     }
 }

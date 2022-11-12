@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Reporte;
+use App\Models\Tarea;
 
-class ReporteController extends Controller
+class TareaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +35,29 @@ class ReporteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tar = new Tarea();
+
+        if( $request->descripcion !==null and
+            $request->load !==null)
+        {
+            $tar->descripcion = $request->descripcion;
+            $tar->load = $request->load;
+
+            if($tar->save())
+            {
+                return response()->json([
+                    'message' => 'Se creo la tarea correctamente'
+                ]);
+            }else{
+                return response()->json([
+                    'message' => 'No se pudo crear la tarea'
+                ]);
+            }
+        }else{
+            return response()->json([
+                'message' => 'Campos nulos'
+            ]);
+        }
     }
 
     /**
@@ -46,19 +68,7 @@ class ReporteController extends Controller
      */
     public function show($id)
     {
-        $rep = Reporte::where("idReporte", $id)
-                ->first();
-
-        if($rep != null)
-        {
-            return response()->json([
-                'data' => $rep
-            ]);
-        }else{
-            return response()->json([
-                'message' => 'No se encontro el reporte'
-            ]);
-        }
+        //
     }
 
     /**
@@ -92,6 +102,24 @@ class ReporteController extends Controller
      */
     public function destroy($id)
     {
+        $tar = Tarea::find($id);
 
+        if($tar != null)
+        {
+            if($tar->delete())
+            {
+                return response()->json([
+                    'message' => 'Se elimino la tarea correctamente'
+                ]);
+            }else{
+                return response()->json([
+                    'message' => 'No se pudo eliminar la tarea'
+                ]);
+            }
+        }else{
+            return response()->json([
+                'message' => 'No se encontro la tarea'
+            ]);
+        }
     }
 }

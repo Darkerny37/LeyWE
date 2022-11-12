@@ -85,7 +85,7 @@ class ArticuloController extends Controller
             ]);
         }else{
             return response()->json([
-                'message' => 'no se encontraron datos'
+                'message' => 'No se encontraron datos'
             ]);
         }
     }

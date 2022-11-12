@@ -9,6 +9,9 @@ class Domicilio extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+    protected $primaryKey = 'idDomicilio';
+
     public function articulos(){
         return $this->hasMany(Articulo::class,'idArticulo','articulo');
     }

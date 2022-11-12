@@ -9,6 +9,9 @@ class Tarea extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+    protected $primaryKey = 'idTarea';
+
     public function loads(){
         return $this->hasMany(Load::class,'idLoad','loads');
     }

@@ -16,13 +16,17 @@ class CreateReservasTable extends Migration
         Schema::create('reservas', function (Blueprint $table) {
             $table->id('idReserva');
             $table->string('nombreReserva',30);
-            $table->unsignedBigInteger('articulo');
+            //$table->unsignedBigInteger('articulo');
+            $table->unsignedBigInteger('load');
             $table->integer('cantidad');
             $table->boolean('disponible');
 
+            $table->foreign('load')
+                    ->references('idLoad')->on('loads');
+            /*
             $table->foreign('articulo')
                     ->references('idArticulo')->on('articulos');
-
+            */
             //$table->timestamps();
         });
     }

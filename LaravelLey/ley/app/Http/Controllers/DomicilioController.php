@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Reporte;
 
-class ReporteController extends Controller
+class DomicilioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +34,29 @@ class ReporteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dom = new Domicilio();
+
+        if( $request->nombreDomicilio !==null and
+            $request->articulo !==null)
+        {
+            $dom->nombreDomicilio = $request->nombreDomicilio;
+            $dom->articulo = $request->articulo;
+
+            if($dom->save())
+            {
+                return response()->json([
+                    'message' => 'Registro guardado correctamente'
+                ]);
+            }else{
+                return response()->json([
+                    'message' => 'No se guardo el registro'
+                ]);
+            }
+        }else{
+            return response()->json([
+                'message' => 'Campos nulos'
+            ]);
+        }
     }
 
     /**
@@ -46,19 +67,7 @@ class ReporteController extends Controller
      */
     public function show($id)
     {
-        $rep = Reporte::where("idReporte", $id)
-                ->first();
-
-        if($rep != null)
-        {
-            return response()->json([
-                'data' => $rep
-            ]);
-        }else{
-            return response()->json([
-                'message' => 'No se encontro el reporte'
-            ]);
-        }
+        //
     }
 
     /**
@@ -92,6 +101,6 @@ class ReporteController extends Controller
      */
     public function destroy($id)
     {
-
+        //
     }
 }

@@ -9,7 +9,12 @@ class Reserva extends Model
 {
     use HasFactory;
 
-    public function articulos(){
+    /*public function articulos(){
         return $this->hasMany(Articulo::class,'idArticulo','articulo');
+    }
+    */
+
+    public function loads(){
+        return $this->hasMany(Load::class,'idLoad', 'loads');
     }
 }
