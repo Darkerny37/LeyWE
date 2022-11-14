@@ -9,6 +9,9 @@ class Reporte extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'idReporte';
+
+
     public function reservas(){
         return $this->hasMany(Reserva::class, 'idReserva','reservas');
     }

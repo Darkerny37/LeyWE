@@ -14,6 +14,10 @@ class Reserva extends Model
     }
     */
 
+    protected $primaryKey = 'idReserva';
+
+    public $timestamps = false;
+
     public function loads(){
         return $this->hasMany(Load::class,'idLoad', 'loads');
     }

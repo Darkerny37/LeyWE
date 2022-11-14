@@ -36,6 +36,9 @@ Route::post('/PasilloAgregar', [App\Http\Controllers\PasilloController::class, '
 Route::delete('/PasilloEliminar/{id}', [App\Http\Controllers\PasilloController::class, 'destroy']);
 
 Route::get('/PasilloConsultar/{id}', [App\Http\Controllers\PasilloController::class, 'show']);
+
+Route::post('/PasilloEditar/{id}', [App\Http\Controllers\PasilloController::class, 'update']);
+
 /*fin*/
 
 /*Reporte*/
@@ -48,6 +51,8 @@ Route::post('/LoadAgregar', [App\Http\Controllers\LoadController::class, 'store'
 Route::get('/LoadConsultar/{id}', [App\Http\Controllers\LoadController::class, 'show']);
 
 Route::delete('/LoadEliminar/{id}', [App\Http\Controllers\LoadController::class, 'destroy']);
+
+Route::post('/LoadEditar/{id}', [App\Http\Controllers\LoadController::class, 'update']);
 /*fin*/
 
 /*Tarea*/
@@ -57,5 +62,12 @@ Route::delete('/TareaEliminar/{id}', [App\Http\Controllers\TareaController::clas
 /*fin*/
 
 /*Ubicacion*/
+
+/*fin*/
+
+/*Reserva*/
+Route::get('/ReservaConsultar/{id}', [App\Http\Controllers\ReservaController::class, 'show']);
+
+Route::post('/ReservaEditar/{id}', [App\Http\Controllers\ReservaController::class, 'update']);
 
 /*fin*/

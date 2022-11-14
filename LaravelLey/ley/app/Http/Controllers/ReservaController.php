@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Load;
+use App\Models\Reserva;
 
-class LoadController extends Controller
+class ReservaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,33 +35,7 @@ class LoadController extends Controller
      */
     public function store(Request $request)
     {
-        $load = new Load();
-
-        if( $request->codigoBarras !== null and
-            $request->articulo !== null and
-            $request->usuario !== null and
-            $request->domicilio !== null)
-        {
-            $load->codigoBarras = $request->codigoBarras;
-            $load->articulo = $request->articulo;
-            $load->usuario = $request->usuario;
-            $load->domicilio = $request->domicilio;
-
-            if($load->save())
-            {
-                return response()->json([
-                    'message' => 'Load guardado correctamente'
-                ]);
-            }else{
-                return response()->json([
-                    'message' => 'No se pudo guardar el Load'
-                ]);
-            }
-        }else{
-            return response()->json([
-                'message' => 'Campos nulos'
-            ]);
-        }
+        //
     }
 
     /**
@@ -72,16 +46,16 @@ class LoadController extends Controller
      */
     public function show($id)
     {
-        $load = Load::where("codigoBarras", $id)
+        $res = Reserva::where('idReserva', $id)
                 ->first();
 
-        if($load != null){
+        if($res != null){
             return response()->json([
-                'data' => $load
+                'data' => $res
             ]);
         }else{
             return response()->json([
-                'message' => 'No se encontraron datos'
+                'message' => 'No se encontro la reserva'
             ]);
         }
     }
@@ -106,21 +80,22 @@ class LoadController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $load = Load::find($id);
+        $res = Reserva::find($id);
 
-        if($load != null){
-            $load->codigoBarras = $request->codigoBarras;
-            $load->articulo = $request->articulo;
-            $load->usuario = $request->usuario;
-            $load->domicilio = $request->domicilio;
+        if($res != null){
 
-            if($load->save()){
+            $res->nombreReserva = $request->nombreReserva;
+            $res->load = $request->load;
+            $res->cantidad = $request->cantidad;
+            $res->disponible = $request->disponible;
+
+            if($res->save()){
                 return response()->json([
                     'message' => 'Se editaron los registros correctamente'
                 ]);
             }else{
                 return response()->json([
-                    'message' => 'No se pudieron editar los registros'
+                    'message' => 'No se pudieron editar los campos'
                 ]);
             }
         }else{
@@ -138,20 +113,6 @@ class LoadController extends Controller
      */
     public function destroy($id)
     {
-        $load = Load::find($id);
-
-        if($load != null){
-            if($load->delete()){
-                return response()->json([
-                    'message' => 'Se elimino correctamente'
-                ]);
-            }else{
-                return response()->json('No se pudo eliminar el Load');
-            }
-        }else{
-            return response()->json([
-                'message' => 'No se encontro el Load'
-            ]);
-        }
+        //
     }
 }

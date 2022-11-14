@@ -108,7 +108,28 @@ class PasilloController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pas = Pasillo::find($id);
+
+        if($pas != null){
+            $pas->codigoBarras = $request->codigoBarras;
+            $pas->nombrePasillo = $request->nombrePasillo;
+            $pas->reserva = $request->reserva;
+            $pas->domicilio = $request->domicilio;
+
+            if($pas->save()){
+                return response()->json([
+                    'message' => 'Se editaron los registros correctamente'
+                ]);
+            }else{
+                return response()->json([
+                    'message' => 'No se pudieron editar los registros'
+                ]);
+            }
+        }else{
+            return response()->json([
+                'message' => 'Datos nulos'
+            ]);
+        }
     }
 
     /**
