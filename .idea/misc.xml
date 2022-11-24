@@ -3,6 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/agregar_ar.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/agregar_codigo.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/agregar_tarea.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/articulo_consultado.xml" value="0.25" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/compara_rep.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/confirmar_ub.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/consulta_a_cod.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/consulta_p_cod.xml" value="0.25" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/contar_ar.xml" value="0.25" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/control_codigo.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/eliminar_codigo.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/eliminar_er.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/lev_nuevoar.xml" value="0.25" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/levantar_articulos.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/menu_admin.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/menu_controli.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/modificar_codigo.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/modificar_mr.xml" value="0.25" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/montacarga_menu.xml" value="0.25" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/montacarga_scodigo.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/montacarga_tareas.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/nuevo_load.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/pasillo_consulta.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/recibidor_codigo.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/recibidor_menu.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/recibidor_pasilloc.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/reporte.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/reserva_newub.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/layout/surtir_dom.xml" value="0.22" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/LeyWE/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1405" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/drawable/buron_norad.xml" value="0.231" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/drawable/burons.xml" value="0.23" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />

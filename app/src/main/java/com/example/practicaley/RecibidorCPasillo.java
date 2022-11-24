@@ -13,6 +13,7 @@ import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 
 public class RecibidorCPasillo extends AppCompatActivity {
+    private String Pasillo;
     private EditText editCodigoPas1;
     private Button escaneadorPas1, continuarPas1;
     @Override
@@ -34,18 +35,23 @@ public class RecibidorCPasillo extends AppCompatActivity {
             barcodeLauncher3.launch(options);
         });
 
-        continuarPas1.setOnClickListener(view -> startActivity(new Intent(RecibidorCPasillo.this,LevantarArticulos.class)));
+        continuarPas1.setOnClickListener(view ->
+        {
+            Pasillo = editCodigoPas1.getText()+"";
+            Intent ILA = new Intent(view.getContext(), LevantarArticulos.class);
+            ILA.putExtra("Pasillo", Pasillo);
+            startActivity(ILA);
+        });
 
 
     }
-
     private final ActivityResultLauncher<ScanOptions> barcodeLauncher3 = registerForActivityResult(new ScanContract(),
             result -> {
                 if(result.getContents() == null) {
                     Toast.makeText(RecibidorCPasillo.this, "Se cancelo la operación", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(RecibidorCPasillo.this, "Se escaneo: " + result.getContents(), Toast.LENGTH_LONG).show();
-                    editCodigoPas1.setText(result.getContents());
+                    editCodigoPas1.setText(result.getContents()+"");
                 }
             });
 }

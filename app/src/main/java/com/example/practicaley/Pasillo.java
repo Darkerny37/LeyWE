@@ -1,2 +1,5 @@
-package com.example.practicaley;public class Pasillo {
+package com.example.practicaley;
+
+public class Pasillo {
+
 }
