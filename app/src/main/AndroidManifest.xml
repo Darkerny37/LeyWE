@@ -112,6 +112,12 @@
         <activity android:name=".Compara_Rep" android:screenOrientation="portrait">
 
         </activity>
+        <activity android:name=".PasilloLoad" android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".PasilloArticulo" android:screenOrientation="portrait">
+
+        </activity>
 
     </application>
 

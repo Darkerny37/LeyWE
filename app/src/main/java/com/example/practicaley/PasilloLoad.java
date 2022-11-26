@@ -5,17 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.content.Intent;
-public class PasilloConsulta extends AppCompatActivity {
-    private Button btnPR;
+public class PasilloLoad extends AppCompatActivity {
+    private Button btnPLD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pasillo_consulta);
+        setContentView(R.layout.pasillo_load);
 
-        btnPR = findViewById(R.id.btnPR);
+        btnPLD = findViewById(R.id.btnPLD);
 
-        btnPR.setOnClickListener(view -> startActivity(new Intent(PasilloConsulta.this,PasilloLoad.class)));
+        btnPLD.setOnClickListener(view -> startActivity(new Intent(PasilloLoad.this,PasilloArticulo.class)));
 
     }
 
