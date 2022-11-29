@@ -12,6 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 
+import Interfaces.serviceRetrofit;
+import Model.loadModel;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class AgregarCodigo extends AppCompatActivity {
     private EditText editCodigoAg;
     private Button escaneadorAg, continuadorAg;
@@ -34,9 +42,50 @@ public class AgregarCodigo extends AppCompatActivity {
             barcodeLauncher8.launch(options);
         });
 
-        continuadorAg.setOnClickListener(view -> startActivity(new Intent(AgregarCodigo.this,AgregarAR.class)));
+        //continuadorAg.setOnClickListener(view -> startActivity(new Intent(AgregarCodigo.this,AgregarAR.class)));
 
+        continuadorAg.setOnClickListener(view -> {
+            if (!editCodigoAg.getText().toString().equals("")){
+                consulta(editCodigoAg.getText().toString());
+            }else{
+                Toast.makeText(getApplicationContext(), "Favor de llenar el campo", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 
+    private void consulta(String id){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://leybodega.000webhostapp.com/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        serviceRetrofit loadServicio = retrofit.create(serviceRetrofit.class);
+
+        Call<loadModel> call = loadServicio.consultaLoad(Long.parseLong(id));
+
+        call.enqueue(new Callback<loadModel>() {
+            @Override
+            public void onResponse(Call<loadModel> call, Response<loadModel> response) {
+                if (response.isSuccessful()){
+                    if (response.body().idLoad != 0){   // body() respuesta del request que viene del servicio
+                        Intent i = new Intent(AgregarCodigo.this, AgregarAR.class);
+                        i.putExtra("idLoad", response.body().idLoad);
+                        i.putExtra("idReserva", response.body().reserva);
+                        startActivity(i);
+                        Toast.makeText(getApplicationContext(), "Load valido", Toast.LENGTH_LONG).show();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Load no valido", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Problemaa" + response.code(),Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<loadModel> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Problema" + t.toString(),Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private final ActivityResultLauncher<ScanOptions> barcodeLauncher8 = registerForActivityResult(new ScanContract(),

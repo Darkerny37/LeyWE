@@ -54,4 +54,5 @@
     <string name="SeleccionRev">Seleccione cual revisar</string>
     <string name="Tarea">Tarea</string>
     <string name="Ub_disponibles">Ubicaciones Disponibles</string>
+    <string name="Num_serie">Numero de serie:</string>
 </resources>
