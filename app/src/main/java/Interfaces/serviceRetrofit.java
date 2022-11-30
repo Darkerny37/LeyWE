@@ -22,8 +22,11 @@ public interface serviceRetrofit {
     @GET("ArticuloConsultar/{id}")
     Call<articuloModel> consultaPorNumSerie(@Path("id") long id);
 
+    @POST("ArticuloEditar/{id}")
+    Call<msgModel> agregarArticuloAdmin(@Path("id") int id, @Body articuloModel articulo);
+
     @GET("ArticuloConsultarPorLoad/{id}")
-    Call<articuloModel> consultaPorLoad(@Path("id") long id);
+    Call<List<articuloModel>> consultaPorLoad(@Path("id") int id);
 
     @GET("PasilloConsultar/{id}")
     Call<pasilloModel> consultaPasilloID(@Path("id") long id);
@@ -31,6 +34,14 @@ public interface serviceRetrofit {
     @GET("ReservaConsultarPorPasillo/{id}")
     Call<List<reservaModel>> consultaReservaPasillo(@Path("id") int id);
 
+    @GET("ReservaConsultar/{id}")
+    Call<reservaModel> consultaReserva(@Path("id") long id);
+
+    @GET("LoadConsultarUno/{id}")
+    Call<loadModel> consultaLoadId(@Path("id") int id);
+
     @GET("LoadConsultar/{id}")
     Call<loadModel> consultaLoad(@Path("id") long id);
+
+
 }
