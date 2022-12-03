@@ -116,7 +116,7 @@ public class ModificarMR extends AppCompatActivity {
                 articulo.idArticulo = lst.get(0).idArticulo;
                 articulo.nombreArticulo = lst.get(0).nombreArticulo;
                 articulo.load = lst.get(0).load;
-                cantidadMod = lst.get(0).cantidad;
+                articulo.numeroSerie = lst.get(0).numeroSerie;
 
                 //articulo.cantidad = cantidadMod;//
                 cantidadMod = articulo.cantidad;
