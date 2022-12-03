@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/almac_n_3d_18891790">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="491dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="388dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="80dp"
         android:background="@color/white"
         app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
@@ -23,55 +24,58 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/botonAgregarTareas"
-                android:layout_width="match_parent"
-                android:layout_height="73dp"
-                android:background="@drawable/buron_norad"
-                android:text="@string/Ag_tarea"
+                android:id="@+id/Ag_load"
+                android:layout_width="228dp"
+                android:layout_height="99dp"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/burons"
+                android:text="@string/Ag_load"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/ListaTarea"
-                android:layout_width="match_parent"
-                android:layout_height="417dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Ag_tarea"
+                android:layout_width="228dp"
+                android:layout_height="99dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/burons"
+                android:text="@string/Ag_tarea"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/botonAgregarTareas"/>
+                app:layout_constraintTop_toBottomOf="@+id/Ag_load" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Ag_articulo"
+                android:layout_width="228dp"
+                android:layout_height="99dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/burons"
+                android:text="@string/Ag_articulo"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Ag_tarea" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botonMandarTareas"
-        android:layout_width="223dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/burons"
-        android:text="@string/Man_tarea"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.0" />
+
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="91dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="158dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/Logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/casa_ley_logo_a556b3ef68_seeklogo_com" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

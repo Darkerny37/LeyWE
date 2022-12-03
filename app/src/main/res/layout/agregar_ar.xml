@@ -128,7 +128,7 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editTextNumber"
+                android:id="@+id/editTextDesc"
                 android:layout_width="109dp"
                 android:layout_height="65dp"
                 android:layout_marginStart="139dp"

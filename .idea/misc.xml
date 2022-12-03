@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/agregar_tarea.xml" value="0.33" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/consulta_p_cod.xml" value="0.2942708333333333" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/item_list_pasilloconsulta.xml" value="0.5" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/item_list_tareaconsulta.xml" value="0.29322916666666665" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/menu_controli.xml" value="0.2942708333333333" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/nuevo_load.xml" value="0.29270833333333335" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/pasillo_consulta.xml" value="0.2942708333333333" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/recibidor_codigo.xml" value="0.5" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/recibidor_menu.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/drawable/buron_norad.xml" value="0.231" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/drawable/burons.xml" value="0.23" />
         <entry key="..\:/Users/Darkerny37/AndroidStudioProjects/Practicaley/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />

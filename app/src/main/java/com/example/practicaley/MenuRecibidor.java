@@ -16,7 +16,9 @@ public class MenuRecibidor extends AppCompatActivity {
         botonTareas=findViewById(R.id.botonTareas);
         botonLI=findViewById(R.id.botonLI);
 
-        botonTareas.setOnClickListener(view -> startActivity(new Intent(MenuRecibidor.this,AgregarTarea.class)));
+        botonTareas.setOnClickListener(view -> {
+            startActivity(new Intent(MenuRecibidor.this,AgregarTarea.class));
+        });
         botonLI.setOnClickListener(view -> startActivity(new Intent(MenuRecibidor.this,RecibidorCPasillo.class)));
     }
 

@@ -19,6 +19,9 @@
     <string name="Continuar">Continuar</string>
     <string name="Codigo">Codigo</string>
     <string name="Ag_tarea">Agregar Tarea</string>
+    <string name="Ag_load">Agregar Load</string>
+    <string name="Ag_articulo">Agregar articulo</string>
+    <string name="Descripcion_Tarea">Descripcion tarea</string>
     <string name="Man_tarea">Mandar Tarea</string>
     <string name="Extra">Algo mas</string>
     <string name="Regresar">Regresar</string>

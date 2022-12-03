@@ -8,6 +8,7 @@ import Model.msgModel;
 import Model.msgModelEliminarArticulo;
 import Model.pasilloModel;
 import Model.reservaModel;
+import Model.tareaModel;
 import Model.userModel;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -54,5 +55,8 @@ public interface serviceRetrofit {
 
     @GET("LoadConsultarPorReserva/{id}")
     Call <List<loadModel>> consultaLoadPorReserva(@Path("id") int id);
+
+    @POST("TareaAgregar")
+    Call<msgModelEliminarArticulo> agregarTarea(@Body tareaModel tarea);
 
 }

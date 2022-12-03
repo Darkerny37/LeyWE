@@ -6,20 +6,26 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class AgregarTarea extends AppCompatActivity{
-    private Button botonAgregarTareas, botonMandarTareas;
-    private ListView ListaTarea;
+    private Button botonAgregarLoad, botonAgregarArticulo, botonAgregarTarea, botonMandarTareas;
+    private RecyclerView ListaTarea;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.agregar_tarea);
-        botonAgregarTareas = findViewById(R.id.botonAgregarTareas);
-        ListaTarea = findViewById(R.id.ListaTarea);
-        botonMandarTareas = findViewById(R.id.botonMandarTareas);
 
-        botonAgregarTareas.setOnClickListener(view -> startActivity(new Intent(AgregarTarea.this,RecibidorCodigo.class)));
-        botonMandarTareas.setOnClickListener(view -> startActivity(new Intent(AgregarTarea.this,MenuRecibidor.class)));
+        //Obtener lista de tareas
+        botonAgregarLoad = findViewById(R.id.Ag_load);
+        botonAgregarArticulo = findViewById(R.id.Ag_articulo);
+        botonAgregarTarea = findViewById(R.id.Ag_tarea);
+
+
+        botonAgregarTarea.setOnClickListener(view -> {
+            startActivity(new Intent(AgregarTarea.this,RecibidorCodigo.class));
+        });
     }
 
 

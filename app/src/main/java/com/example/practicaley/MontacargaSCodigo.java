@@ -20,7 +20,7 @@ public class MontacargaSCodigo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.montacarga_scodigo);
 
-        editCodigoDos = findViewById(R.id.editCodigoDos);
+        editCodigoDos = findViewById(R.id.editCodigoUno);
         escaneadorDos = findViewById(R.id.escaneadorDos);
         continuadorDos = findViewById(R.id.continuarDos);
 
