@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/almac_n_3d_18891790">
@@ -63,12 +64,11 @@
                 android:id="@+id/mCantidadA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="@string/CantidadAc"
+                android:layout_marginTop="48dp"
+                android:text="Cantidad actual:"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mReserva" />
 
@@ -76,11 +76,12 @@
                 android:id="@+id/mCantidadN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="60dp"
                 android:text="@string/CantidadNw"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mCantidadA" />
 
@@ -91,11 +92,12 @@
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="52dp"
                 android:clickable="false"
+                android:contentDescription="@string/Relleno"
+                android:visibility="gone"
                 app:backgroundTint="@color/yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mCantidadN"
-                app:srcCompat="@drawable/mas2"
-                android:contentDescription="@string/Relleno" />
+                app:srcCompat="@drawable/mas2" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton3"
@@ -104,26 +106,28 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="52dp"
                 android:clickable="false"
+                android:contentDescription="@string/Relleno"
+                android:visibility="gone"
                 app:backgroundTint="@color/yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
-                app:srcCompat="@drawable/menos1"
-                android:contentDescription="@string/Relleno"/>
+                app:srcCompat="@drawable/menos1" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editTextNumber"
                 android:layout_width="109dp"
                 android:layout_height="65dp"
-                android:layout_marginStart="128dp"
                 android:layout_marginTop="44dp"
                 android:ems="10"
                 android:hint="@string/valor"
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mCantidadN">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TextInputEditText"
                     android:layout_width="108dp"
                     android:layout_height="67dp"
                     android:background="@drawable/login"
@@ -131,6 +135,50 @@
                     android:textColor="@color/black"
                     android:textColorHint="@color/codCol" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtvNomArticuloMR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mNombre" />
+
+            <TextView
+                android:id="@+id/txtvLoadMR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mLoad" />
+
+            <TextView
+                android:id="@+id/txtvReservaMR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mReserva" />
+
+            <TextView
+                android:id="@+id/txtvCanActMR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mCantidadA" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

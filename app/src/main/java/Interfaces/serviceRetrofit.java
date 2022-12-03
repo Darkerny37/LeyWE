@@ -5,11 +5,13 @@ import java.util.List;
 import Model.articuloModel;
 import Model.loadModel;
 import Model.msgModel;
+import Model.msgModelEliminarArticulo;
 import Model.pasilloModel;
 import Model.reservaModel;
 import Model.userModel;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -25,8 +27,15 @@ public interface serviceRetrofit {
     @POST("ArticuloEditar/{id}")
     Call<msgModel> agregarArticuloAdmin(@Path("id") int id, @Body articuloModel articulo);
 
+    @POST("ArticuloEditar/{id}")
+    Call<msgModelEliminarArticulo> modificarArticuloAdmin(@Path("id") int id, @Body articuloModel articulo);
+
+
     @GET("ArticuloConsultarPorLoad/{id}")
     Call<List<articuloModel>> consultaPorLoad(@Path("id") int id);
+
+    @GET("ArticuloEliminar/{id}")
+    Call<msgModelEliminarArticulo> eliminarArticulo(@Path("id") int id);
 
     @GET("PasilloConsultar/{id}")
     Call<pasilloModel> consultaPasilloID(@Path("id") long id);
@@ -43,5 +52,7 @@ public interface serviceRetrofit {
     @GET("LoadConsultar/{id}")
     Call<loadModel> consultaLoad(@Path("id") long id);
 
+    @GET("LoadConsultarPorReserva/{id}")
+    Call <List<loadModel>> consultaLoadPorReserva(@Path("id") int id);
 
 }
