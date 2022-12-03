@@ -7,10 +7,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Interfaces.serviceRetrofit;
+import Model.articuloModel;
 import Model.reservaModel;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,11 +25,27 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class PasilloConsulta extends AppCompatActivity {
     private Button btnPR;
     public int idPasillo;
+
+    // Para el Recycler View
+    ArrayList<articuloModel> listaArticulos;
+    RecyclerView recyclerArticulos;
+    // fin
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pasillo_consulta);
 
+        listaArticulos = new ArrayList<>();
+        recyclerArticulos = (RecyclerView) findViewById(R.id.listRV);
+        recyclerArticulos.setLayoutManager(new LinearLayoutManager(this));
+
+        llenarArticulos();
+
+        AdaptadorArticulos adapter = new AdaptadorArticulos(listaArticulos);
+        recyclerArticulos.setAdapter(adapter);
+        
+        /*
         //Traer parametro de mi intent (consulta p codigo)
         String nombrePasillo = getIntent().getExtras().getString("nombrePasillo");
         idPasillo = getIntent().getExtras().getInt("idPasillo");
@@ -39,9 +59,18 @@ public class PasilloConsulta extends AppCompatActivity {
 
         consultaReservaPorPasillo(idPasillo);
         btnPR.setOnClickListener(view -> startActivity(new Intent(PasilloConsulta.this,MenuAdmin.class)));
+        
+         */
 
     }
 
+    private void llenarArticulos() {
+        //listaArticulos.add(new articuloModel();
+    }
+
+    
+    
+    /*
     private void consultaReservaPorPasillo(int id){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://leybodega.000webhostapp.com/api/")
@@ -80,6 +109,6 @@ public class PasilloConsulta extends AppCompatActivity {
             }
         });
     }
-
+    */
 
 }

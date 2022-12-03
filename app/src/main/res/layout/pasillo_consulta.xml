@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/almac_n_3d_18891790">
+    android:background="@drawable/almac_n_3d_18891790"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -18,7 +19,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="730dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listRV"
@@ -111,8 +112,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnPR"
-        android:layout_width="223dp"
-        android:layout_height="59dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/burons"
         android:text="@string/Regresar"
@@ -123,18 +124,5 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:layout_constraintVertical_bias="0.157" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="76dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="12dp"
-        android:contentDescription="@string/Logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/casa_ley_logo_a556b3ef68_seeklogo_com" />
 
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
