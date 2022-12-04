@@ -1,5 +1,6 @@
 package com.example.practicaley;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -9,6 +10,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+
+import com.example.practicaley.Adapters.AdaptadorArticulos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +41,7 @@ public class PasilloConsulta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pasillo_consulta);
 
-        listaArticulos = new ArrayList<>();
         recyclerArticulos = (RecyclerView) findViewById(R.id.listRV);
-        recyclerArticulos.setLayoutManager(new LinearLayoutManager(this));
 
         //llenarArticulos();
 
@@ -163,13 +165,9 @@ public class PasilloConsulta extends AppCompatActivity {
 
                         listaArticulos = response.body();
 
-                        AdaptadorArticulos adapter = new AdaptadorArticulos(listaArticulos);
+                        AdaptadorArticulos adapter = new AdaptadorArticulos(getApplicationContext(), listaArticulos);
                         recyclerArticulos.setAdapter(adapter);
-
-                        //Llenar la lista en el recycle view se pone el onclick se pasa el id de la reserva que selecciono
-                        //reservaList = response.body();
-                        //mAdatper = new ArrayAdapter(this, android.R.layout.simple_list_item_1, reservaList);
-                        //listv.setAdapter(mAdatper);
+                        recyclerArticulos.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                     }else{
                         Toast.makeText(getApplicationContext(), "Pasillo no valido", Toast.LENGTH_LONG).show();
                     }

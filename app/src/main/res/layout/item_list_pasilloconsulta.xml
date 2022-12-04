@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
     android:layout_margin="15dp"
     android:background="@drawable/burons"
     android:orientation="vertical"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:paddingEnd="5dp"
-            android:text="TextView"
+            android:text="@string/Cantidad"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
             tools:text="@string/Cantidad" />
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:paddingEnd="5dp"
-            android:text="TextView"
+            android:text="@string/Load"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
             tools:text="@string/Load" />
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:paddingEnd="7dp"
-            android:text="TextView"
+            android:text="@string/Reserva"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
             tools:text="@string/Reserva" />
