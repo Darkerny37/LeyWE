@@ -2,18 +2,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.practicaley">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Practicaley"
-        android:hardwareAccelerated="true"
         tools:targetApi="31">
+        <activity
+            android:name=".CgBarrasAgregarLoad"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarLoadPasillo"
+            android:exported="false"
+            android:label="@string/title_activity_agregar_load_pasillo"
+            android:theme="@style/Theme.Practicaley.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -24,101 +34,99 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MenuRecibidor" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".AgregarTarea" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".RecibidorCodigo" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".NuevoLoad" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".MenuMontacarga" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".TareasMontacarga" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ReservaNewUbicacion" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ConfirmarUbicacion" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".MontacargaSCodigo" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".SurtirDom" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".RecibidorCPasillo" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".LevantarArticulos" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".LevNuevoArticulo" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ContarAR" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".MenuAdmin" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ArticuloConsultado" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ConsultaACodigo" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ConsultaPCodigo" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".PasilloConsulta" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".Reporte" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".AgregarAR" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".AgregarCodigo" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ControlCodigo" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".EliminarCodigo" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".EliminarER" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".MenuControlI" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ModificarCodigo" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ModificarMR" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".Compara_Rep" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".PasilloLoad" android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".PasilloArticulo" android:screenOrientation="portrait">
-
-        </activity>
-
+        <activity
+            android:name=".MenuRecibidor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AgregarTarea"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecibidorCodigo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NuevoLoad"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuMontacarga"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TareasMontacarga"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReservaNewUbicacion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConfirmarUbicacion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MontacargaSCodigo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SurtirDom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecibidorCPasillo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LevantarArticulos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LevNuevoArticulo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContarAR"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ArticuloConsultado"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConsultaACodigo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConsultaPCodigo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PasilloConsulta"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reporte"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AgregarAR"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AgregarCodigo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ControlCodigo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EliminarCodigo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EliminarER"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuControlI"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModificarCodigo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModificarMR"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Compara_Rep"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PasilloLoad"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PasilloArticulo"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

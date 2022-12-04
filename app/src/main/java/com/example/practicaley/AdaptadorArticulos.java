@@ -44,10 +44,12 @@ public class AdaptadorArticulos extends RecyclerView.Adapter<AdaptadorArticulos.
 
         public ViewHolderArticulos(View itemView) {
             super(itemView);
-            //nombreArticulo = (TextView) itemView.findViewById(R.id.txtvidNombreArtRV);
-            //cantidad = (TextView) itemView.findViewById(R.id.txtvidCantidadArtRV);
-            //load = (TextView) itemView.findViewById(R.id.txtvidLoadRV);
-            //reserva = (TextView) itemView.findViewById(R.id.txtvidReservaRV);
+            nombreArticulo = (TextView) itemView.findViewById(R.id.tvNombreArticuloConsulta);
+            cantidad = (TextView) itemView.findViewById(R.id.tvCantidadConsultaPasillo);
+            load = (TextView) itemView.findViewById(R.id.tvLoadConsultaPasillo);
+            reserva = (TextView) itemView.findViewById(R.id.tvReservaConsultaPasillo);
         }
     }
+
+
 }

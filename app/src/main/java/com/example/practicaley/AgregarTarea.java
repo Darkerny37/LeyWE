@@ -26,6 +26,10 @@ public class AgregarTarea extends AppCompatActivity{
         botonAgregarTarea.setOnClickListener(view -> {
             startActivity(new Intent(AgregarTarea.this,RecibidorCodigo.class));
         });
+
+        botonAgregarLoad.setOnClickListener(view -> {
+            startActivity(new Intent(AgregarTarea.this,AgregarLoadPasillo.class));
+        });
     }
 
 
