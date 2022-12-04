@@ -9,14 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import Model.articuloModel;
 
 public class AdaptadorArticulos extends RecyclerView.Adapter<AdaptadorArticulos.ViewHolderArticulos> {
 
-    ArrayList<articuloModel> listaArticulos;
+    List<articuloModel> listaArticulos;
 
-    public AdaptadorArticulos(ArrayList<articuloModel> listaArticulos) {
+    public AdaptadorArticulos(List<articuloModel> listaArticulos) {
         this.listaArticulos = listaArticulos;
     }
 

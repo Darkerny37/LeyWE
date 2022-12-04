@@ -28,7 +28,7 @@ public class PasilloConsulta extends AppCompatActivity {
     public int idPasillo;
 
     // Para el Recycler View
-    ArrayList<articuloModel> listaArticulos;
+    List<articuloModel> listaArticulos;
     RecyclerView recyclerArticulos;
     // fin
 
@@ -161,7 +161,7 @@ public class PasilloConsulta extends AppCompatActivity {
                 if (response.isSuccessful()){
                     if (response.body().size() != 0){
 
-                        listaArticulos = (ArrayList<articuloModel>) response.body();
+                        listaArticulos = response.body();
 
                         AdaptadorArticulos adapter = new AdaptadorArticulos(listaArticulos);
                         recyclerArticulos.setAdapter(adapter);

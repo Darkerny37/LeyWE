@@ -4,9 +4,8 @@ public class loadModel {
 
     public int idLoad;
     public String codigoBarras;
-    public int reserva;
+    public Integer reserva;
     public int usuario;
-    public int domicilio;
 
     /**
      * No args constructor for use in serialization
@@ -18,18 +17,16 @@ public class loadModel {
     /**
      *
      * @param idLoad
-     * @param domicilio
      * @param usuario
      * @param reserva
      * @param codigoBarras
      */
-    public loadModel(int idLoad, String codigoBarras, int reserva, int usuario, int domicilio) {
+    public loadModel(int idLoad, String codigoBarras, Integer reserva, int usuario ) {
         super();
         this.idLoad = idLoad;
         this.codigoBarras = codigoBarras;
         this.reserva = reserva;
         this.usuario = usuario;
-        this.domicilio = domicilio;
     }
 
     public int getIdLoad() {
@@ -52,7 +49,7 @@ public class loadModel {
         return reserva;
     }
 
-    public void setReserva(int reserva) {
+    public void setReserva(Integer reserva) {
         this.reserva = reserva;
     }
 
@@ -64,12 +61,5 @@ public class loadModel {
         this.usuario = usuario;
     }
 
-    public int getDomicilio() {
-        return domicilio;
-    }
-
-    public void setDomicilio(int domicilio) {
-        this.domicilio = domicilio;
-    }
 
 }
