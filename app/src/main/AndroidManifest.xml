@@ -17,6 +17,12 @@
         android:theme="@style/Theme.Practicaley"
         tools:targetApi="31">
         <activity
+            android:name=".AgregarArticuloLoad"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarArticulo"
+            android:exported="false" />
+        <activity
             android:name=".CgBarrasAgregarLoad"
             android:exported="false" />
         <activity

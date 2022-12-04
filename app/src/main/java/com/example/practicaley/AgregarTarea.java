@@ -30,6 +30,10 @@ public class AgregarTarea extends AppCompatActivity{
         botonAgregarLoad.setOnClickListener(view -> {
             startActivity(new Intent(AgregarTarea.this,AgregarLoadPasillo.class));
         });
+
+        botonAgregarArticulo.setOnClickListener(view -> {
+            startActivity(new Intent(AgregarTarea.this,AgregarArticulo.class));
+        });
     }
 
 

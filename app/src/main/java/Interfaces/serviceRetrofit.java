@@ -31,7 +31,6 @@ public interface serviceRetrofit {
     @POST("ArticuloEditar/{id}")
     Call<msgModelEliminarArticulo> modificarArticuloAdmin(@Path("id") int id, @Body articuloModel articulo);
 
-
     @GET("ArticuloConsultarPorLoad/{id}")
     Call<List<articuloModel>> consultaPorLoad(@Path("id") int id);
 
