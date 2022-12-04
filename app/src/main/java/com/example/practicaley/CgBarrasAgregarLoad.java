@@ -122,7 +122,7 @@ public class CgBarrasAgregarLoad extends AppCompatActivity {
             public void onResponse(Call<msgModelEliminarArticulo> call, Response<msgModelEliminarArticulo> response) {
                 if (response.isSuccessful()){
                     if (!response.body().message.equals("")){
-                        if (response.body().message.equals("Se creo el load correctamente")) {
+                        if (response.body().message.equals("Load guardado correctamente")) {
                             Toast.makeText(getApplicationContext(), response.body().message, Toast.LENGTH_LONG).show();
                             startActivity(new Intent(CgBarrasAgregarLoad.this,AgregarTarea.class));
 
