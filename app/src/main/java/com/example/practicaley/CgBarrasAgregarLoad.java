@@ -89,7 +89,7 @@ public class CgBarrasAgregarLoad extends AppCompatActivity {
                     if (response.body().size() != 0){
 
                         List<reservaModel> lst = response.body();
-                        load.reserva =lst.get(0).idReserva;
+                        load.reserva = null;
                         load.usuario = 2;
                         agregarLoad(load);
                     }else{

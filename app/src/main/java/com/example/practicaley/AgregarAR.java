@@ -80,18 +80,27 @@ public class AgregarAR extends AppCompatActivity {
         call.enqueue(new Callback <List<articuloModel>>() {
             @Override
             public void onResponse(Call<List<articuloModel>> call, Response<List<articuloModel>> response) {
-                List<articuloModel> lst = response.body();
+                if(response.isSuccessful()) {
+                    if (response.body().size() != 0) {
+                        List<articuloModel> lst = response.body();
 
-                Toast.makeText(getApplicationContext(), lst.get(0).nombreArticulo, Toast.LENGTH_LONG).show();
 
-                idArticulo.setText(Integer.toString(lst.get(0).idArticulo));
-                nomArticulo.setText(lst.get(0).nombreArticulo);
-                numSerie = lst.get(0).numeroSerie;
-                cantTemp = lst.get(0).cantidad;
-                consultarLoad(Integer.toString(lst.get(0).load));
-                consultarReserva(Integer.toString(getIntent().getExtras().getInt("idReserva")));
-                loadCdgBarras = Integer.toString(lst.get(0).load);
-                //reserva.setText(Integer.toString(getIntent().getExtras().getInt("idReserva")));
+                        idArticulo.setText(Integer.toString(lst.get(0).idArticulo));
+                        nomArticulo.setText(lst.get(0).nombreArticulo);
+                        numSerie = lst.get(0).numeroSerie;
+                        cantTemp = lst.get(0).cantidad;
+                        consultarLoad(Integer.toString(lst.get(0).load));
+                        consultarReserva(Integer.toString(getIntent().getExtras().getInt("idReserva")));
+                        loadCdgBarras = Integer.toString(lst.get(0).load);
+                        //reserva.setText(Integer.toString(getIntent().getExtras().getInt("idReserva")));
+                    } else {
+                        Toast.makeText(getApplicationContext(), "No existen articulos con ese load", Toast.LENGTH_LONG).show();
+
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Problema en la ruta", Toast.LENGTH_LONG).show();
+                }
+
             }
 
             @Override

@@ -68,11 +68,15 @@ public class AgregarCodigo extends AppCompatActivity {
             public void onResponse(Call<loadModel> call, Response<loadModel> response) {
                 if (response.isSuccessful()){
                     if (response.body().idLoad != 0){   // body() respuesta del request que viene del servicio
+                        if (response.body().reserva == null){
+                            Toast.makeText(getApplicationContext(), "No hay una reserva en este Load", Toast.LENGTH_LONG).show();
+                        }else{
                         Intent i = new Intent(AgregarCodigo.this, AgregarAR.class);
                         i.putExtra("idLoad", response.body().idLoad);
                         i.putExtra("idReserva", response.body().reserva);
                         startActivity(i);
                         Toast.makeText(getApplicationContext(), "Load valido", Toast.LENGTH_LONG).show();
+                        }
                     }else{
                         Toast.makeText(getApplicationContext(), "Load no valido", Toast.LENGTH_LONG).show();
                     }

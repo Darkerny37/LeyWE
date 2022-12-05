@@ -107,21 +107,29 @@ public class ModificarMR extends AppCompatActivity {
         call.enqueue(new Callback<List<articuloModel>>() {
             @Override
             public void onResponse(Call<List<articuloModel>> call, Response<List<articuloModel>> response) {
-                List<articuloModel> lst = response.body();
+                if (response.isSuccessful()) {
+                    if(response.body().size() != 0){
+                    List<articuloModel> lst = response.body();
 
 
-                nomArticulo.setText(lst.get(0).nombreArticulo);
-                cantidadAct.setText(Integer.toString(lst.get(0).cantidad));
-                Toast.makeText(getApplicationContext(), lst.get(0).nombreArticulo, Toast.LENGTH_LONG).show();
-                articulo.idArticulo = lst.get(0).idArticulo;
-                articulo.nombreArticulo = lst.get(0).nombreArticulo;
-                articulo.load = lst.get(0).load;
-                articulo.numeroSerie = lst.get(0).numeroSerie;
+                    nomArticulo.setText(lst.get(0).nombreArticulo);
+                    cantidadAct.setText(Integer.toString(lst.get(0).cantidad));
+                    Toast.makeText(getApplicationContext(), lst.get(0).nombreArticulo, Toast.LENGTH_LONG).show();
+                    articulo.idArticulo = lst.get(0).idArticulo;
+                    articulo.nombreArticulo = lst.get(0).nombreArticulo;
+                    articulo.load = lst.get(0).load;
+                    articulo.numeroSerie = lst.get(0).numeroSerie;
 
-                //articulo.cantidad = cantidadMod;//
-                cantidadMod = articulo.cantidad;
+                    //articulo.cantidad = cantidadMod;//
+                    cantidadMod = articulo.cantidad;
 
-                consultarReserva(Integer.toString(getIntent().getExtras().getInt("idReserva")));
+                    consultarReserva(Integer.toString(getIntent().getExtras().getInt("idReserva")));
+                }else{
+                        Toast.makeText(getApplicationContext(), "No existen articulos con ese load", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Problema en la ruta", Toast.LENGTH_LONG).show();
+                }
             }
 
             @Override

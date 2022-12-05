@@ -6,16 +6,15 @@ public class articuloModel {
     public String nombreArticulo;
     public String numeroSerie;
     public int cantidad;
+    public Integer load;
 
     public int getLoad() {
         return load;
     }
 
-    public void setLoad(int load) {
+    public void setLoad(Integer load) {
         this.load = load;
     }
-
-    public int load;
 
     public int getIdArticulo() {
         return idArticulo;
