@@ -13,7 +13,6 @@ import com.example.practicaley.R;
 import java.util.List;
 
 import Model.articuloModel;
-import retrofit2.Callback;
 
 public class AdaptadorArticulos extends RecyclerView.Adapter<AdaptadorArticulos.ViewHolderArticulos> {
 
@@ -51,7 +50,7 @@ public class AdaptadorArticulos extends RecyclerView.Adapter<AdaptadorArticulos.
         public ViewHolderArticulos(View itemView) {
             super(itemView);
             nombreArticulo = (TextView) itemView.findViewById(R.id.tvNombreArticuloConsulta);
-            cantidad = (TextView) itemView.findViewById(R.id.tvCantidadConsultaPasillo);
+            cantidad = (TextView) itemView.findViewById(R.id.tvDescTareas);
             load = (TextView) itemView.findViewById(R.id.tvLoadConsultaPasillo);
             reserva = (TextView) itemView.findViewById(R.id.tvReservaConsultaPasillo);
         }

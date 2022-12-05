@@ -61,5 +61,7 @@ public interface serviceRetrofit {
     @POST("LoadAgregar")
     Call<msgModelEliminarArticulo> agregarLoad(@Body loadModel load);
 
+    @GET("Tareas")
+    Call<List<tareaModel>> consultarTareas();
 
 }
