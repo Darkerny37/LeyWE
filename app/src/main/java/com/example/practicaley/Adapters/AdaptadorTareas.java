@@ -21,10 +21,14 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class AdaptadorTareas extends RecyclerView.Adapter<AdaptadorTareas.ViewHolderTareas> {
+public class AdaptadorTareas
+        extends RecyclerView.Adapter<AdaptadorTareas.ViewHolderTareas>
+            implements  View.OnClickListener{
 
     List<tareaModel> listaTareas;
     Context context;
+
+    private View.OnClickListener  listener;
 
     public AdaptadorTareas(Context context, List<tareaModel> listaTareas) {
         this.context = context;
@@ -34,6 +38,11 @@ public class AdaptadorTareas extends RecyclerView.Adapter<AdaptadorTareas.ViewHo
     @Override
     public ViewHolderTareas onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_list_tareaconsulta, parent, false);
+
+        // para el setOnClick
+        view.setOnClickListener(this);
+        //fin
+
         return new AdaptadorTareas.ViewHolderTareas(view);
     }
 
@@ -50,6 +59,20 @@ public class AdaptadorTareas extends RecyclerView.Adapter<AdaptadorTareas.ViewHo
     public int getItemCount() {
         return listaTareas.size();
     }
+
+    // para el setOnClickListener
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener = listener;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (listener != null){
+            listener.onClick(view);
+        }
+    }
+    //fin
+
 
     public class ViewHolderTareas extends RecyclerView.ViewHolder {
 

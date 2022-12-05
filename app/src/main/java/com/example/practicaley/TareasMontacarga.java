@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.Toast;
@@ -61,6 +62,15 @@ public class TareasMontacarga extends AppCompatActivity {
                         AdaptadorTareas adapter = new AdaptadorTareas(getApplicationContext(), tareas);
                         RVTareas.setAdapter(adapter);
                         RVTareas.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+                        //para setOnClickListener
+                        adapter.setOnClickListener(new View.OnClickListener(){
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(new Intent(TareasMontacarga.this, MenuMontacarga.class));
+                            }
+                        });
+
                     }else{
                         Toast.makeText(getApplicationContext(), "No hay tareas", Toast.LENGTH_LONG).show();
                     }
