@@ -46,6 +46,9 @@ public interface serviceRetrofit {
     @GET("ReservaConsultar/{id}")
     Call<reservaModel> consultaReserva(@Path("id") long id);
 
+    @GET("ReservasConsultar")
+    Call<List<reservaModel>> consultaReservas();
+
     @GET("LoadConsultarUno/{id}")
     Call<loadModel> consultaLoadId(@Path("id") int id);
 

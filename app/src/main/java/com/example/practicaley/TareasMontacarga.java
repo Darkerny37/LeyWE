@@ -67,12 +67,22 @@ public class TareasMontacarga extends AppCompatActivity {
                         adapter.setOnClickListener(new View.OnClickListener(){
                             @Override
                             public void onClick(View view) {
-                                int itemPosition = RVTareas.getChildLayoutPosition(view);
-                                int id = tareas.get(itemPosition).idTarea;
+                                /*
+
                                 Intent i = new Intent(TareasMontacarga.this, AgregarTareaReserva.class);
                                 i.putExtra("idTarea", id);
                                 startActivity(i);
+                                */
+                                //startActivity(new Intent(TareasMontacarga.this, ReservaNewUbicacion.class));
+                                int itemPosition = RVTareas.getChildLayoutPosition(view);
+                                int id = tareas.get(itemPosition).idTarea;
+                                String desc = tareas.get(itemPosition).descripcion;
 
+                                Intent i = new Intent(TareasMontacarga.this, ReservaNewUbicacion.class);
+                                i.putExtra("idTarea", id);
+                                i.putExtra("descripcionTarea", desc);
+
+                                startActivity(i);
                             }
                         });
 

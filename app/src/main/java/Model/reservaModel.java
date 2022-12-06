@@ -4,6 +4,7 @@ public class reservaModel {
 
     public int idReserva;
     public String nombreReserva;
+    //public String codigoBarras;
     public int cantidad;
     public int disponible;
     public int pasillo;
@@ -27,6 +28,7 @@ public class reservaModel {
         super();
         this.idReserva = idReserva;
         this.nombreReserva = nombreReserva;
+        //this.codigoBarras = codigoBarras;
         this.cantidad = cantidad;
         this.disponible = disponible;
         this.pasillo = pasillo;
@@ -40,6 +42,7 @@ public class reservaModel {
         this.idReserva = idReserva;
     }
 
+
     public String getNombreReserva() {
         return nombreReserva;
     }
@@ -47,6 +50,17 @@ public class reservaModel {
     public void setNombreReserva(String nombreReserva) {
         this.nombreReserva = nombreReserva;
     }
+
+
+    /*
+    public String getCodigoBarras() {
+        return codigoBarras;
+    }
+
+    public void setCodigoBarras(String codigoBarras) {
+        this.codigoBarras = codigoBarras;
+    }
+    */
 
     public int getCantidad() {
         return cantidad;

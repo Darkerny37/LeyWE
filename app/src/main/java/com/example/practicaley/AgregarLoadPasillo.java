@@ -12,13 +12,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+/*
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import com.example.practicaley.databinding.ActivityAgregarLoadPasilloBinding;
+*/
+//import com.example.practicaley.databinding.ActivityAgregarLoadPasilloBinding;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 

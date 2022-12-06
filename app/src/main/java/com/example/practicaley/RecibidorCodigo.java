@@ -108,9 +108,10 @@ public class RecibidorCodigo extends AppCompatActivity {
             public void onResponse(Call<msgModelEliminarArticulo> call, Response<msgModelEliminarArticulo> response) {
                 if (response.isSuccessful()){
                     if (!response.body().message.equals("")){
-                        if(response.body().message.equals("Se creo la tarea correctamente"))
-                        Toast.makeText(getApplicationContext(), response.body().message, Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(RecibidorCodigo.this,AgregarTarea.class));
+                        if(response.body().message.equals("Se creo la tarea correctamente")) {
+                            Toast.makeText(getApplicationContext(), response.body().message, Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(RecibidorCodigo.this,AgregarTarea.class));
+                        }
 
                     }else{
                         Toast.makeText(getApplicationContext(), response.body().message, Toast.LENGTH_LONG).show();
