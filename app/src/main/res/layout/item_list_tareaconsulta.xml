@@ -32,7 +32,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:inputType="textMultiLine"
-            android:text="asdas"
+            android:text="Cargando..."
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             tools:ignore="TouchTargetSizeCheck" />
@@ -54,7 +54,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:inputType="textMultiLine"
-            android:text="asdas"
+            android:text="Cargando..."
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             tools:ignore="TouchTargetSizeCheck" />

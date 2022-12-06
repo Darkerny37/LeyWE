@@ -64,4 +64,6 @@ public interface serviceRetrofit {
     @GET("Tareas")
     Call<List<tareaModel>> consultarTareas();
 
+    @GET("TareaEditar/{id}")
+    Call<msgModelEliminarArticulo> modificarTareaLoad(@Path("id") int id, @Body tareaModel tarea);
 }

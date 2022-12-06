@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Practicaley"
         tools:targetApi="31">
         <activity
+            android:name=".AgregarTareaReserva"
+            android:exported="false" />
+        <activity
             android:name=".AgregarArticuloLoad"
             android:exported="false" />
         <activity

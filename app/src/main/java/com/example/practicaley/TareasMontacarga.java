@@ -67,7 +67,12 @@ public class TareasMontacarga extends AppCompatActivity {
                         adapter.setOnClickListener(new View.OnClickListener(){
                             @Override
                             public void onClick(View view) {
-                                startActivity(new Intent(TareasMontacarga.this, MenuMontacarga.class));
+                                int itemPosition = RVTareas.getChildLayoutPosition(view);
+                                int id = tareas.get(itemPosition).idTarea;
+                                Intent i = new Intent(TareasMontacarga.this, AgregarTareaReserva.class);
+                                i.putExtra("idTarea", id);
+                                startActivity(i);
+
                             }
                         });
 

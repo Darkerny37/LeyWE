@@ -6,7 +6,9 @@
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/activity_agregar_articulo.xml" value="0.3875" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/activity_agregar_articulo_load.xml" value="0.3875" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/activity_agregar_load_pasillo.xml" value="0.33" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/activity_agregar_tarea_reserva.xml" value="0.22" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/activity_cg_barras_agregar_load.xml" value="0.2578125" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/activity_main.xml" value="0.1884498480243161" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/agregar_ar.xml" value="0.3875" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/agregar_codigo.xml" value="0.3875" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/agregar_load_recibidor.xml" value="0.27447916666666666" />
@@ -22,13 +24,18 @@
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/lev_nuevoar.xml" value="0.3875" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/levantar_articulos.xml" value="0.3875" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/menu_controli.xml" value="0.2942708333333333" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/modificar_codigo.xml" value="0.2259963768115942" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/modificar_mr.xml" value="0.2259963768115942" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/montacarga_menu.xml" value="0.3875" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/montacarga_scodigo.xml" value="0.2259963768115942" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/montacarga_tareas.xml" value="0.3875" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/nuevo_load.xml" value="0.29270833333333335" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/pasillo_artic.xml" value="0.3875" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/pasillo_consulta.xml" value="0.33" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/pasillo_load.xml" value="0.1884498480243161" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/recibidor_codigo.xml" value="0.5" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/recibidor_menu.xml" value="0.22291666666666668" />
+        <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/recibidor_pasilloc.xml" value="0.1884498480243161" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/reporte.xml" value="0.3875" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/reserva_newub.xml" value="0.3875" />
         <entry key="..\:/Documentos/Github/LeyWE/app/src/main/res/layout/surtir_dom.xml" value="0.3875" />
