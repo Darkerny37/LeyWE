@@ -77,7 +77,7 @@ public class ReservaNewUbicacion extends AppCompatActivity {
                                 int idReserva = responseReservas.get(itemPosition).idReserva;
                                 String nombreReserva = responseReservas.get(itemPosition).nombreReserva;
 
-                                Intent i = new Intent(ReservaNewUbicacion.this, ReservaNewUbicacion.class);
+                                Intent i = new Intent(ReservaNewUbicacion.this, ConfirmarUbicacion.class);
                                 i.putExtra("idReserva", idReserva);
                                 i.putExtra("NombreReserva", nombreReserva);
                                 i.putExtra("descripcionTarea", desc);
