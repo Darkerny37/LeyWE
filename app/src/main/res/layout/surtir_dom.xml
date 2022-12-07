@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/almac_n_3d_18891790">
@@ -22,6 +23,42 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/numeroSerieLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cargando..."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sd..." />
+
+            <TextView
+                android:id="@+id/nombreArticulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cargando..."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sdNombre" />
+
+            <TextView
+                android:id="@+id/NumeroSerie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cargando..."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sdID" />
+
+            <TextView
                 android:id="@+id/sdID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,38 +74,38 @@
                 android:id="@+id/sdNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/Nom_Articulo"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sdID" />
+                app:layout_constraintTop_toBottomOf="@+id/NumeroSerie" />
 
             <TextView
                 android:id="@+id/sd..."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:text="@string/Extra"
+                android:layout_marginTop="40dp"
+                android:text="@string/Load"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sdNombre" />
+                app:layout_constraintTop_toBottomOf="@+id/nombreArticulo" />
 
             <TextView
                 android:id="@+id/sdTipo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="96dp"
                 android:text="@string/Tipo"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sd..." />
 
@@ -76,20 +113,21 @@
                 android:id="@+id/sdTipo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/cantidadAAg"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerDos" />
+                app:layout_constraintTop_toBottomOf="@+id/numeroSerieLoad" />
 
             <Spinner
                 android:id="@+id/spinnerDos"
                 android:layout_width="312dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="40dp"
                 android:dropDownWidth="wrap_content"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sdTipo" />
@@ -100,11 +138,12 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="52dp"
+                android:contentDescription="@string/Relleno"
+                android:visibility="gone"
                 app:backgroundTint="@color/yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sdTipo2"
-                app:srcCompat="@drawable/mas2"
-                android:contentDescription="@string/Relleno" />
+                app:srcCompat="@drawable/mas2" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/sdfloatingActionButton3"
@@ -112,26 +151,28 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="52dp"
+                android:contentDescription="@string/Relleno"
+                android:visibility="gone"
                 app:backgroundTint="@color/yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sdfloatingActionButton"
-                app:srcCompat="@drawable/menos1"
-                android:contentDescription="@string/Relleno" />
+                app:srcCompat="@drawable/menos1" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editTextDesc"
                 android:layout_width="109dp"
                 android:layout_height="65dp"
-                android:layout_marginStart="128dp"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="8dp"
                 android:ems="10"
                 android:hint="@string/valor"
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sdTipo2">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TextInputEditText"
                     android:layout_width="108dp"
                     android:layout_height="67dp"
                     android:background="@drawable/login"

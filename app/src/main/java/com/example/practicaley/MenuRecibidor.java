@@ -19,7 +19,9 @@ public class MenuRecibidor extends AppCompatActivity {
         botonTareas.setOnClickListener(view -> {
             startActivity(new Intent(MenuRecibidor.this,AgregarTarea.class));
         });
-        botonLI.setOnClickListener(view -> startActivity(new Intent(MenuRecibidor.this,RecibidorCPasillo.class)));
+        botonLI.setOnClickListener(view -> {
+            startActivity(new Intent(MenuRecibidor.this,RecibidorCPasillo.class));
+        });
     }
 
 }

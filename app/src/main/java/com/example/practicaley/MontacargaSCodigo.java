@@ -12,6 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 
+import Interfaces.serviceRetrofit;
+import Model.articuloModel;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class MontacargaSCodigo extends AppCompatActivity {
     private EditText editCodigoDos;
     private Button escaneadorDos, continuadorDos;
@@ -34,10 +42,62 @@ public class MontacargaSCodigo extends AppCompatActivity {
             barcodeLauncher2.launch(options);
         });
 
-        continuadorDos.setOnClickListener(view -> startActivity(new Intent(MontacargaSCodigo.this,SurtirDom.class)));
+        continuadorDos.setOnClickListener(view -> {
+            //Consultar el objeto
+
+            if(!editCodigoDos.getText().toString().equals("")){
+                consulta(editCodigoDos.getText().toString());
+
+            }else
+            {
+                Toast.makeText(getApplicationContext(), "Favor de llenar el campo" ,Toast.LENGTH_LONG).show();
+            }
+        });
 
 
     }
+
+    private void consulta(String id){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://leybodega.000webhostapp.com/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        serviceRetrofit consultaCdgService = retrofit.create(serviceRetrofit.class);
+
+        Call<articuloModel> call = consultaCdgService.consultaPorNumSerie(Long.parseLong(id));
+
+        call.enqueue(new Callback<articuloModel>() {
+                         @Override
+                         public void onResponse(Call<articuloModel> call, Response<articuloModel> response) {
+                             if(response.isSuccessful()){
+                                 if(response.body().idArticulo != 0){
+
+                                     Intent i = new Intent(MontacargaSCodigo.this, SurtirDom.class);
+                                     i.putExtra("idArticulo", response.body().idArticulo);
+                                     i.putExtra("cantidad", response.body().cantidad);
+                                     i.putExtra("nombreArticulo", response.body().nombreArticulo);
+                                     i.putExtra("numeroSerie", response.body().numeroSerie);
+                                     i.putExtra("load", response.body().load);
+                                     startActivity(i);
+                                 }else {
+                                     Toast.makeText(getApplicationContext(), "Articulo no valido", Toast.LENGTH_LONG).show();
+
+                                 }
+
+                             }else{
+                                 Toast.makeText(getApplicationContext(), "Problemaaa" + response.code(),Toast.LENGTH_LONG).show();
+                             }
+                         }
+
+                         @Override
+                         public void onFailure(Call<articuloModel> call, Throwable t) {
+                             Toast.makeText(getApplicationContext(), "Problema" + t.toString(),Toast.LENGTH_LONG).show();
+                         }
+                     }
+        );
+    }
+
 
     private final ActivityResultLauncher<ScanOptions> barcodeLauncher2 = registerForActivityResult(new ScanContract(),
             result -> {
