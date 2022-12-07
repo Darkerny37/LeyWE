@@ -27,7 +27,7 @@
             tools:text="@string/Descripcion_Tarea" />
 
         <TextView
-            android:id="@+id/tvDescTareas"
+            android:id="@+id/tvDescTarea"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

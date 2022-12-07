@@ -50,7 +50,7 @@ public class AdaptadorArticulos extends RecyclerView.Adapter<AdaptadorArticulos.
         public ViewHolderArticulos(View itemView) {
             super(itemView);
             nombreArticulo = (TextView) itemView.findViewById(R.id.tvNombreArticuloConsulta);
-            cantidad = (TextView) itemView.findViewById(R.id.tvDescTareas);
+            cantidad = (TextView) itemView.findViewById(R.id.tvDescTarea);
             load = (TextView) itemView.findViewById(R.id.tvLoadConsultaPasillo);
             reserva = (TextView) itemView.findViewById(R.id.tvReservaConsultaPasillo);
         }

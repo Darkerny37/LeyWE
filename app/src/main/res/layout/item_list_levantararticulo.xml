@@ -35,11 +35,11 @@
             tools:text="@string/Cantidad" />
 
         <TextView
-            android:id="@+id/tvDescTarea"
+            android:id="@+id/tvCantidadLevantar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="00000000000"
+            android:text="Cargando..."
             android:textColor="#FFFFFF" />
     </LinearLayout>
 
@@ -57,15 +57,17 @@
             android:text="@string/Load"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
+            android:visibility="gone"
             tools:text="@string/Load" />
 
         <TextView
-            android:id="@+id/tvLoadConsultaPasillo"
+            android:id="@+id/tvLoadLevantar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="234234"
-            android:textColor="#FFFFFF" />
+            android:text="Cargando..."
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout
@@ -79,17 +81,17 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:paddingEnd="7dp"
-            android:text="@string/Reserva"
+            android:text="Numero serie"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
-            tools:text="@string/Reserva" />
+            tools:text="Numero serie" />
 
         <TextView
-            android:id="@+id/tvReservaConsultaPasillo"
+            android:id="@+id/tvNumSerieLevantar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="este es el nombre de la reseva 1"
+            android:text="Cargando..."
             android:textColor="#FFFFFF" />
     </LinearLayout>
 

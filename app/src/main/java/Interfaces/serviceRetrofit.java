@@ -2,6 +2,7 @@ package Interfaces;
 
 import java.util.List;
 
+import Model.articuloAuxModel;
 import Model.articuloModel;
 import Model.loadModel;
 import Model.msgModel;
@@ -72,4 +73,10 @@ public interface serviceRetrofit {
 
     @POST("TareaEditar/{id}")
     Call<msgModelEliminarArticulo> modificarTareaLoad(@Path("id") int id, @Body tareaModel tarea);
+
+    @GET("ArticuloAuxConsultarPasillo/{id}")
+    Call<List<articuloAuxModel>> consultarArticulosAuxPorPasillo(@Path("id") int id);
+
+    @POST("ArticuloAuxAgregar")
+    Call<msgModelEliminarArticulo> agregarArticulosAux(@Body articuloAuxModel articuloAux);
 }

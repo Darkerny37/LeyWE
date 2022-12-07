@@ -80,7 +80,7 @@ public class AdaptadorTareas
 
         public ViewHolderTareas(View itemView) {
             super(itemView);
-            tvDescTareas = (TextView) itemView.findViewById(R.id.tvDescTareas);
+            tvDescTareas = (TextView) itemView.findViewById(R.id.tvDescTarea);
             tvLoadTareas = (TextView) itemView.findViewById(R.id.tvLoadTareas);
         }
 

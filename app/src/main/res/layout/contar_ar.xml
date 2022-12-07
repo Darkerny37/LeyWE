@@ -23,10 +23,22 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/tvNombreArticuloContarAr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Cargando..."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/caNombre" />
+
+            <TextView
                 android:id="@+id/caID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="80dp"
                 android:text="@string/ID_Articulo"
                 android:textColor="@color/black"
                 android:textSize="20sp"
@@ -35,42 +47,41 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/tvIdArticuloContarAr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Cargando..."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/caID" />
+
+            <TextView
                 android:id="@+id/caNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/Nom_Articulo"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/caID" />
-
-            <TextView
-                android:id="@+id/ca..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:text="@string/Extra"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/caNombre" />
+                app:layout_constraintTop_toBottomOf="@+id/tvIdArticuloContarAr" />
 
             <TextView
                 android:id="@+id/caTipo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="92dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/CantidadCon"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ca..." />
+                app:layout_constraintTop_toBottomOf="@+id/tvNombreArticuloContarAr" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton"
@@ -79,12 +90,13 @@
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="52dp"
                 android:clickable="false"
+                android:contentDescription="@string/Relleno"
+                android:visibility="gone"
                 app:backgroundTint="@color/yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/caTipo"
                 app:srcCompat="@drawable/mas2"
-                tools:ignore="SpeakableTextPresentCheck"
-                android:contentDescription="@string/Relleno" />
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton3"
@@ -93,27 +105,29 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="52dp"
                 android:clickable="false"
+                android:contentDescription="@string/Relleno"
+                android:visibility="gone"
                 app:backgroundTint="@color/yellow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
                 app:srcCompat="@drawable/menos1"
-                tools:ignore="SpeakableTextPresentCheck"
-                android:contentDescription="@string/Relleno"/>
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editTextDesc"
                 android:layout_width="109dp"
                 android:layout_height="65dp"
-                android:layout_marginStart="128dp"
                 android:layout_marginTop="44dp"
                 android:ems="10"
                 android:hint="@string/valor"
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/caTipo">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TextInputEditText"
                     android:layout_width="108dp"
                     android:layout_height="67dp"
                     android:background="@drawable/login"
