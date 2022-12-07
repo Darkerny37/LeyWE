@@ -12,6 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 
+import Interfaces.serviceRetrofit;
+import Model.pasilloModel;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class RecibidorCPasillo extends AppCompatActivity {
     private EditText editCodigoPas1;
     private Button escaneadorPas1, continuarPas1;
@@ -34,8 +42,51 @@ public class RecibidorCPasillo extends AppCompatActivity {
             barcodeLauncher3.launch(options);
         });
 
-        continuarPas1.setOnClickListener(view -> startActivity(new Intent(RecibidorCPasillo.this,LevantarArticulos.class)));
+        //continuarPas1.setOnClickListener(view -> startActivity(new Intent(RecibidorCPasillo.this,LevantarArticulos.class)));
+        continuarPas1.setOnClickListener(view -> {
+            if (!editCodigoPas1.getText().toString().equals("")){
+                consulta(editCodigoPas1.getText().toString());
+            }else{
+                Toast.makeText(getApplicationContext(), "Favor de llenar el campo", Toast.LENGTH_LONG).show();
+            }
+        });
 
+    }
+
+    private void consulta(String id){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://leybodega.000webhostapp.com/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        serviceRetrofit pasilloServicio = retrofit.create(serviceRetrofit.class);
+
+        Call<pasilloModel> call = pasilloServicio.consultaPasilloID(Long.parseLong(id));
+
+        call.enqueue(new Callback<pasilloModel>() {
+            @Override
+            public void onResponse(Call<pasilloModel> call, Response<pasilloModel> response) {
+                if (response.isSuccessful()){
+                    if (response.body().idPasillo != 0){
+                        Intent i = new Intent(RecibidorCPasillo.this, LevantarArticulos.class);
+                        i.putExtra("idPasillo", response.body().idPasillo);
+                        startActivity(i);
+                        Toast.makeText(getApplicationContext(), "Pasillo valido", Toast.LENGTH_LONG).show();
+
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Pasillo no valido", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Problemaa" + response.code(),Toast.LENGTH_LONG).show();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<pasilloModel> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Problema" + t.toString(),Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
