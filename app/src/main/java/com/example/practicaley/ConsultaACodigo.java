@@ -77,6 +77,8 @@ public class ConsultaACodigo extends AppCompatActivity {
                          i.putExtra("cantidad", response.body().cantidad);
                          i.putExtra("nombreArticulo", response.body().nombreArticulo);
                          i.putExtra("numeroSerie", response.body().numeroSerie);
+                         if(response.body().load != null)
+                            i.putExtra("load", response.body().load.toString());
                          startActivity(i);
                      }else {
                          Toast.makeText(getApplicationContext(), "Articulo no valido", Toast.LENGTH_LONG).show();

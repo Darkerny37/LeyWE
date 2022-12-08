@@ -24,13 +24,41 @@
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Pasillo"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cargando..."
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.508"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tituloPasillo" />
+
+            <TextView
+                android:id="@+id/tituloPasillo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Pasillo"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             <TextView
                 android:id="@+id/txtidArticulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cargando..."
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +69,8 @@
                 android:id="@+id/txtnombreArticulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cargando..."
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +81,8 @@
                 android:id="@+id/txtCantidad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:layout_marginTop="8dp"
+                android:text="Cargando..."
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +106,7 @@
                 android:id="@+id/acID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/ID_Articulo"
                 android:textColor="@color/black"
                 android:textSize="20sp"
@@ -87,32 +118,32 @@
                 android:id="@+id/acNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="88dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/Nom_Articulo"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ac..." />
+                app:layout_constraintTop_toBottomOf="@+id/txtInfo" />
 
             <TextView
                 android:id="@+id/ac..."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="88dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/Num_serie"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/txtidArticulo" />
+                app:layout_constraintTop_toBottomOf="@+id/txtidArticulo" />
 
             <TextView
                 android:id="@+id/txtInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="0"
+                android:text="Cargando..."
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -124,13 +155,39 @@
                 android:id="@+id/acTipo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="88dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/Cantidad"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/acNombre" />
+                app:layout_constraintTop_toBottomOf="@+id/txtnombreArticulo" />
+
+            <TextView
+                android:id="@+id/asdaas1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Reserva"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCantidad" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cargando..."
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/asdaas1" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
