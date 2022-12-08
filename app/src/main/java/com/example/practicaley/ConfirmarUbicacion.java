@@ -218,8 +218,49 @@ public class ConfirmarUbicacion extends AppCompatActivity {
             public void onResponse(Call<msgModelEliminarArticulo>call, Response<msgModelEliminarArticulo> response) {
                 if (response.isSuccessful()){
                     if(!response.body().message.equals("")){
-                        if(response.body().message.equals("Se editaron los registros correctamente"))
+                        if(response.body().message.equals("Se editaron los registros correctamente")) {
                             Toast.makeText(getApplicationContext(), "Se agrego reserva a load", Toast.LENGTH_LONG).show();
+                            //Eliminar tarea
+                            eliminarTarea(idTareaExtra);
+                        }else {
+                            Toast.makeText(getApplicationContext(), response.body().message, Toast.LENGTH_LONG).show();
+                        }
+                    }else{
+                        Toast.makeText(getApplicationContext(), "load con reserva no valido", Toast.LENGTH_LONG).show();
+
+                    }
+
+                }else{
+                    Toast.makeText(getApplicationContext(), "Problema " + response.code(), Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<msgModelEliminarArticulo> call, Throwable t) {
+                Toast.makeText(ConfirmarUbicacion.this, "Error"+ t.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    private void eliminarTarea(int id){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://leybodega.000webhostapp.com/api/")
+                .addConverterFactory(GsonConverterFactory.create()) // para que la respuesta se convierta en modelo directamente
+                .build();
+
+        serviceRetrofit loadServicio = retrofit.create(serviceRetrofit.class);
+
+        Call<msgModelEliminarArticulo>call = loadServicio.eliminarTarea(id);
+
+        call.enqueue(new Callback <msgModelEliminarArticulo>() {
+            @Override
+            public void onResponse(Call<msgModelEliminarArticulo>call, Response<msgModelEliminarArticulo> response) {
+                if (response.isSuccessful()){
+                    if(!response.body().message.equals("")){
+                        if(response.body().message.equals("Se elimino la tarea correctamente"))
+                            Toast.makeText(getApplicationContext(), "Se elimino la tarea correctamente", Toast.LENGTH_LONG).show();
+                            //Eliminar tarea
                         else
                             Toast.makeText(getApplicationContext(), response.body().message, Toast.LENGTH_LONG).show();
                     }else{

@@ -59,7 +59,7 @@ public class AgregarAR extends AppCompatActivity {
                 articulo.nombreArticulo = nomArticulo.getText().toString();
                 articulo.numeroSerie = numSerie;
                 articulo.cantidad = Integer.parseInt(valor.getText().toString()) + cantTemp;
-                articulo.load = Integer.parseInt(loadCdgBarras);
+                //articulo.load = Integer.parseInt(loadCdgBarras);
 
 
                 agregar(Integer.parseInt(idArticulo.getText().toString()), articulo);

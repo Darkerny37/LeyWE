@@ -8,6 +8,7 @@ import Model.loadModel;
 import Model.msgModel;
 import Model.msgModelEliminarArticulo;
 import Model.pasilloModel;
+import Model.reporteModel;
 import Model.reservaModel;
 import Model.tareaModel;
 import Model.userModel;
@@ -68,6 +69,9 @@ public interface serviceRetrofit {
     @POST("TareaAgregar")
     Call<msgModelEliminarArticulo> agregarTarea(@Body tareaModel tarea);
 
+    @POST("ReporteAgregar")
+    Call<msgModelEliminarArticulo> agregarReporte(@Body reporteModel reporte);
+
     @POST("LoadAgregar")
     Call<msgModelEliminarArticulo> agregarLoad(@Body loadModel load);
 
@@ -77,8 +81,17 @@ public interface serviceRetrofit {
     @POST("TareaEditar/{id}")
     Call<msgModelEliminarArticulo> modificarTareaLoad(@Path("id") int id, @Body tareaModel tarea);
 
+    @GET("TareaEliminar/{id}")
+    Call<msgModelEliminarArticulo> eliminarTarea(@Path("id") int id);
+
     @GET("ArticuloAuxConsultarPasillo/{id}")
     Call<List<articuloAuxModel>> consultarArticulosAuxPorPasillo(@Path("id") int id);
+
+    @GET("ArticulosAuxConsultar")
+    Call<List<articuloAuxModel>> consultaAriculosAuxConsultar();
+
+    @GET("ArticulosConsultarNombre/{name}")
+    Call<articuloModel> consultaArticulosPorNombre(@Path(value="name") String name);
 
     @POST("ArticuloAuxAgregar")
     Call<msgModelEliminarArticulo> agregarArticulosAux(@Body articuloAuxModel articuloAux);
