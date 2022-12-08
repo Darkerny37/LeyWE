@@ -28,7 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ReservaNewUbicacion extends AppCompatActivity {
     private Button btnUbLis;
     private  TextView reserva;
-    public int idTarea; public String desc;
+    public int idTarea, idLoadParam; public String desc;
     public RecyclerView rvReservas;
     public  List<reservaModel> responseReservas;
 
@@ -38,6 +38,7 @@ public class ReservaNewUbicacion extends AppCompatActivity {
         setContentView(R.layout.reserva_newub);
         idTarea= getIntent().getExtras().getInt("idTarea");
         desc = getIntent().getExtras().getString("descripcionTarea");
+        idLoadParam = getIntent().getExtras().getInt("load");
 
         rvReservas = (RecyclerView) findViewById(R.id.listU);
         consultarReservas();
@@ -83,6 +84,7 @@ public class ReservaNewUbicacion extends AppCompatActivity {
                                 i.putExtra("descripcionTarea", desc);
                                 i.putExtra("idTarea", idTarea);
                                 i.putExtra("idPasillo", responseReservas.get(itemPosition).pasillo);
+                                i.putExtra("idLoad", idLoadParam);
                                 startActivity(i);
 
                             }

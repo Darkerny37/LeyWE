@@ -81,6 +81,7 @@ public class TareasMontacarga extends AppCompatActivity {
                                 Intent i = new Intent(TareasMontacarga.this, ReservaNewUbicacion.class);
                                 i.putExtra("idTarea", id);
                                 i.putExtra("descripcionTarea", desc);
+                                i.putExtra("load",tareas.get(itemPosition).load);
 
                                 startActivity(i);
                             }
